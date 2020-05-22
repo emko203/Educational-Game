@@ -23,9 +23,12 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // mouseDown = Input.GetMouseButton(1);
 
         if (mouseDown)
         {
+           // mousePos = Input.mousePosition;
+
             MoveCharacter(mousePos);
         }
     }
@@ -35,7 +38,7 @@ public class PlayerMovementController : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100, MovementMask))
+            if (Physics.Raycast(ray, out hit, 300, MovementMask))
             {
                 agent.destination = hit.point;
             }
