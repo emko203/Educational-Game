@@ -13,6 +13,7 @@ public class PlayerMovementController : MonoBehaviour
     public Transform Player;
 
     private bool mouseDown = false;
+    private Vector3 mousePos = Vector3.zero;
 
 
     // Update is called once per frame
@@ -22,7 +23,16 @@ public class PlayerMovementController : MonoBehaviour
 
         if (mouseDown)
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            mousePos = Input.mousePosition;
+
+            MoveCharacter();
+        }
+    }
+
+    private void MoveCharacter()
+    {
+        
+            Ray ray = cam.ScreenPointToRay(mousePos);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, 100, MovementMask))
@@ -30,6 +40,5 @@ public class PlayerMovementController : MonoBehaviour
                 //move our player to hit
                 agent.destination = hit.point;
             }
-        }
     }
 }
