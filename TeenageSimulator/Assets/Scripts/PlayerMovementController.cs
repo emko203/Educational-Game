@@ -26,13 +26,13 @@ public class PlayerMovementController : MonoBehaviour
 
         if (mouseDown)
         {
-            MoveCharacter();
+            MoveCharacter(mousePos);
         }
     }
 
-    private void MoveCharacter()
+    private void MoveCharacter(Vector2 mousePosition)
     {
-            Ray ray = cam.ScreenPointToRay(mousePos);
+            Ray ray = cam.ScreenPointToRay(mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, 100, MovementMask))
