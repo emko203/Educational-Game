@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent), typeof(ParticleSpawner))]
 public class PlayerMovementController : MonoBehaviour
 {
     public Camera cam;
@@ -12,18 +12,19 @@ public class PlayerMovementController : MonoBehaviour
     public LayerMask MovementMask;
 
     private NavMeshAgent agent;
+    private ParticleSpawner particleSpawner;
     private bool mouseDown = false;
     private Vector2 mousePos = Vector2.zero;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        particleSpawner = GetComponent<ParticleSpawner>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (mouseDown)
         {
             MoveCharacter(mousePos);
@@ -38,6 +39,7 @@ public class PlayerMovementController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100, MovementMask))
             {
                 agent.destination = hit.point;
+                particleSpawner.SpawnMovementParticles(hit.point);
             }
     }
 

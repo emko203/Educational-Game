@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 8201988608738559445}
   - component: {fileID: 4335126817935037379}
   - component: {fileID: 230122810850077472}
+  - component: {fileID: 4669745811875045362}
   - component: {fileID: 3930164827412755276}
   m_Layer: 0
   m_Name: Character
@@ -262,6 +263,20 @@ MonoBehaviour:
   MovementMask:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!114 &4669745811875045362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8201988608738559454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6dbd039759df2d44af91048f4cbcfb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementIndicator: {fileID: 1204649774233346151, guid: facd3a5aecd97ca4482689029e9dee1a,
+    type: 3}
 --- !u!195 &3930164827412755276
 NavMeshAgent:
   m_ObjectHideFlags: 0
