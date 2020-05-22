@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMovementController : MonoBehaviour
 {
     public Camera cam;
 
     public LayerMask MovementMask;
-    public NavMeshAgent agent;
 
-    public Transform Player;
-
+    private NavMeshAgent agent;
     private bool mouseDown = false;
     private Vector3 mousePos = Vector3.zero;
 
+    private void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,7 +34,6 @@ public class PlayerMovementController : MonoBehaviour
 
     private void MoveCharacter()
     {
-        
             Ray ray = cam.ScreenPointToRay(mousePos);
             RaycastHit hit;
 
