@@ -14,6 +14,7 @@ public class PlayerMovementController : MonoBehaviour
     private NavMeshAgent agent;
     private ParticleSpawner particleSpawner;
     private bool mouseDown = false;
+    private bool hasSpawnedParticles = false;
     private Vector2 mousePos = Vector2.zero;
 
     private void Start()
@@ -39,7 +40,11 @@ public class PlayerMovementController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100, MovementMask))
             {
                 agent.destination = hit.point;
-                particleSpawner.SpawnMovementParticles(hit.point);
+                if (!hasSpawnedParticles)
+                    {
+                        particleSpawner.SpawnMovementParticles(hit.point);
+                        hasSpawnedParticles = true;
+                    }
             }
     }
 
@@ -54,5 +59,6 @@ public class PlayerMovementController : MonoBehaviour
     {
         context.action.performed += ctx => mouseDown = true;
         context.action.canceled += ctx => mouseDown = false;
+        context.action.performed += ctx => hasSpawnedParticles = false;
     }
 }
