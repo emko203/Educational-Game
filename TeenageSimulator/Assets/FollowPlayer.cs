@@ -12,17 +12,9 @@ public class FollowPlayer : MonoBehaviour
     [Range(-100, 100)]
     public float xOffset = 0;
 
-    private Transform cam;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        cam = GetComponent<Camera>().transform;
-    }
-
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        cam.position = new Vector3(player.position.x + xOffset, cam.position.y, player.position.z + zOffset);
+        transform.position = new Vector3(player.position.x + xOffset, transform.position.y, player.position.z + zOffset);
     }
 }
