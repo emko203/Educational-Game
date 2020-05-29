@@ -35,13 +35,22 @@ public class PlayerMovementController : MonoBehaviour
 
     private void MoveCharacter(Vector2 mousePosition)
     {
-            Ray ray = cam.ScreenPointToRay(mousePosition);
-            RaycastHit hit;
+        Ray ray = cam.ScreenPointToRay(mousePosition);
+        RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 300, MovementMask))
+        if (Physics.Raycast(ray, out hit, 300, MovementMask))
+        {
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
+
+            if (interactable != null)
+            {
+                Debug.Log("This is interactable");
+            }
+            else
             {
                 agent.destination = hit.point;
             }
+        }
     }
 
     public void PassMousePosition(InputAction.CallbackContext context)
