@@ -10737,7 +10737,11 @@ PrefabInstance:
     - target: {fileID: 1258363629667819184, guid: ba28fe37ec99a4e4e9aac687aa54c073,
         type: 3}
       propertyPath: orthographic size
+<<<<<<< Updated upstream
       value: 32
+=======
+      value: 30
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1258363629667819184, guid: ba28fe37ec99a4e4e9aac687aa54c073,
         type: 3}
