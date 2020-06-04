@@ -66,7 +66,6 @@ public class PlayerMovementController : MonoBehaviour
                     StartCoroutine(CheckIfInRadius(interactable, distance));
                 }
 
-                Debug.Log("This is interactable");
             }
             else
             {
@@ -90,8 +89,8 @@ public class PlayerMovementController : MonoBehaviour
             distance = Vector3.Distance(transform.position, target.transform.position);
             yield return null;
         }
-
         agent.isStopped = true;
+        target.HandleInteraction();
     }
 
     public void PassMousePosition(InputAction.CallbackContext context)
