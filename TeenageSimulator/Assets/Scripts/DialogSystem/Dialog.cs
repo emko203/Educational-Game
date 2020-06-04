@@ -8,7 +8,8 @@ public class Dialog : ScriptableObject
     [SerializeField]
     private string text;
     [SerializeField]
-    private List<Option> Options;
+    private List<Option> options;
 
     public string Text { get => text;}
+    public List<Option> Options { get => options;}
 }

@@ -6,11 +6,14 @@ using UnityEngine;
 public class Option : ScriptableObject
 {
     [SerializeField]
-    private string Text;
+    private string text;
     [SerializeField]
-    private Dialog LinkedDialog;
+    private Dialog linkedDialog;
     [SerializeField]
     private List<StatChange> changes;
+
+    public Dialog LinkedDialog { get => linkedDialog; set => linkedDialog = value; }
+    public string Text { get => text; set => text = value; }
 
     private class StatChange
     {
