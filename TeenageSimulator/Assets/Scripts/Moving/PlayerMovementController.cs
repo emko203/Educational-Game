@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -22,7 +23,6 @@ public class PlayerMovementController : MonoBehaviour
     private void Start()
     {
         motor = GetComponent<PlayerMotor>();
-        
     }
 
     // Update is called once per frame
@@ -38,36 +38,40 @@ public class PlayerMovementController : MonoBehaviour
 
     private void MoveCharacter(Vector2 mousePosition)
     {
-        Ray ray = cam.ScreenPointToRay(mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 300, MovementMask))
+        //if we have the mouse over our ui system we dont interact with the world
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            Interactable interactable = hit.collider.GetComponent<Interactable>();
+            Ray ray = cam.ScreenPointToRay(mousePosition);
+            RaycastHit hit;
 
-            if (interactable != null)
+            if (Physics.Raycast(ray, out hit, 300, MovementMask))
             {
-                //Clicked on interactable
+                Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-                //Calculate distance to the interactable
-                float distance = Vector3.Distance(transform.position, interactable.transform.position);
-
-                if (distance < interactable.radius)
+                if (interactable != null)
                 {
-                    //In range so we just handle the interaction
-                    interactable.HandleInteraction();
+                    //Clicked on interactable
+
+                    //Calculate distance to the interactable
+                    float distance = Vector3.Distance(transform.position, interactable.transform.position);
+
+                    if (distance < interactable.radius)
+                    {
+                        //In range so we just handle the interaction
+                        interactable.HandleInteraction();
+                    }
+                    else
+                    {
+                        //Not in range so we move toward interactable
+                        motor.MoveToInteractable(interactable.transform.position, interactable, distance);
+                    }
+
                 }
                 else
                 {
-                    //Not in range so we move toward interactable
-                    motor.MoveToInteractable(interactable.transform.position, interactable, distance);
+                    //Just move to point on ground
+                    motor.MoveToDestination(hit.point);
                 }
-
-            }         
-            else
-            {
-                //Just move to point on ground
-                motor.MoveToDestination(hit.point);
             }
         }
     }
