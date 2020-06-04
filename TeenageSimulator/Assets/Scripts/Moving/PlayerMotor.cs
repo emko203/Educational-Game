@@ -43,8 +43,6 @@ public class PlayerMotor : MonoBehaviour
         agent.SetDestination(destination);
 
         SpawnMoveParticles(destination);
-
-        Debug.Log("hit");
     }
 
     private void SpawnMoveParticles(Vector3 destination)
