@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
   m_Name: TestOption1
   m_EditorClassIdentifier: 
-  text: 
-  linkedDialog: {fileID: 0}
+  text: Test1
+  linkedDialog: {fileID: 11400000, guid: f74e94b27ad9857458354796d1b25448, type: 2}

@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
-  m_Name: TestDialog
+  m_Name: TestDialog1
   m_EditorClassIdentifier: 
   text: Test 123
-  Options: []
+  options:
+  - {fileID: 11400000, guid: d64df906572efea4ca9be474914d6900, type: 2}
+  - {fileID: 11400000, guid: 46aedf2da0082a443b9b7dc49158edfb, type: 2}
