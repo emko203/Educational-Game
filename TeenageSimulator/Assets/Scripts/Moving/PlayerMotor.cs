@@ -25,6 +25,7 @@ public class PlayerMotor : MonoBehaviour
     {
         StopMoving();
         StopAllCoroutines();
+        EndInterAction();
 
         agent.isStopped = false;
         agent.destination = destination;
@@ -71,6 +72,11 @@ public class PlayerMotor : MonoBehaviour
             //Player in range of target so we move to target
             StopMoving();
         }
+    }
+
+    private void EndInterAction()
+    {
+        target.EndInteraction();
     }
 
     public void StopMoving()
