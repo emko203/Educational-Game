@@ -33,6 +33,11 @@ public class PlayerMotor : MonoBehaviour
         agent.obstacleAvoidanceType = AvoidanceType;
     }
 
+    public void SetSpawnParticles(bool value)
+    {
+        hasSpawnedParticles = value;
+    }
+
     public void MoveToDestination(Vector3 destination)
     {
         StopMoving();
@@ -50,7 +55,7 @@ public class PlayerMotor : MonoBehaviour
         if (!hasSpawnedParticles)
         {
             particleSpawner.SpawnMovementParticles(destination);
-            hasSpawnedParticles = true;
+            SetSpawnParticles(true);
         }
     }
 

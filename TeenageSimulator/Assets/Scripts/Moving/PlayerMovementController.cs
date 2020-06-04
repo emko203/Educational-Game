@@ -85,6 +85,6 @@ public class PlayerMovementController : MonoBehaviour
     {
         context.action.performed += ctx => mouseDown = true;
         context.action.canceled += ctx => mouseDown = false;
-        context.action.performed += ctx => hasSpawnedParticles = false;
+        context.action.performed += ctx => motor.SetSpawnParticles(false);
     }
 }
