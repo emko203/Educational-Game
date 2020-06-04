@@ -20,4 +20,9 @@ public class DialogInteractable : Interactable
     {
         HandleDialog();
     }
+
+    public override void EndInteraction()
+    {
+        TextBox.gameObject.SetActive(false);
+    }
 }

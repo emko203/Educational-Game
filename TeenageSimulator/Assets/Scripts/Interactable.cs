@@ -11,6 +11,11 @@ public class Interactable : MonoBehaviour
     {
 
     }
+
+    public virtual void EndInteraction()
+    {
+
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
