@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: TestDialog2
   m_EditorClassIdentifier: 
-  text: 
-  options: []
+  text: Doet ie het al?
+  options:
+  - {fileID: 11400000, guid: 8f566938fe3f260438dbc0ec37582361, type: 2}
