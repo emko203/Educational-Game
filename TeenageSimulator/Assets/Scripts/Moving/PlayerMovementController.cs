@@ -8,8 +8,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    public Camera cam;
-    public LayerMask MovementMask;
+    [SerializeField]
+    private Camera cam;
+
+    [SerializeField]
+    private LayerMask MovementMask;
 
     private PlayerMotor motor;
     private bool mouseDown = false;
@@ -27,7 +30,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (mouseDown)
         {
-           // mousePos = Input.mousePosition;
+            mousePos = Input.mousePosition;
 
             MoveCharacter(mousePos);
         }
@@ -73,8 +76,8 @@ public class PlayerMovementController : MonoBehaviour
 
     public void PassMousePosition(InputAction.CallbackContext context)
     {
-        context.action.performed += ctx => mousePos = ctx.ReadValue<Vector2>();
-        context.action.canceled += ctx => mousePos = Vector2.zero;
+       // context.action.performed += ctx => mousePos = ctx.ReadValue<Vector2>();
+       // context.action.canceled += ctx => mousePos = Vector2.zero;
 
     }
 
