@@ -14,7 +14,6 @@ public class PlayerJordy : MonoBehaviour
 
     private bool mouseDown = false;
 
-    public ParticleSystem MovementIndicator;
 
 
     // Update is called once per frame
@@ -30,7 +29,6 @@ public class PlayerJordy : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100, MovementMask))
             {
                 //move our player to hit
-                Instantiate(MovementIndicator, hit.point, Quaternion.identity);
                 agent.destination = hit.point;
             }
         }
