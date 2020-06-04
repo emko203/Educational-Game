@@ -40,9 +40,11 @@ public class PlayerMotor : MonoBehaviour
 
     public void MoveToDestination(Vector3 destination)
     {
+        EndInterAction();
+
+        ClearCurrentTarget();
         StopMoving();
         StopAllCoroutines();
-        EndInterAction();
 
         agent.isStopped = false;
         agent.SetDestination(destination);
@@ -97,9 +99,13 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
+    private void ClearCurrentTarget()
+    {
+        target = null;
+    }
+
     public void StopMoving()
     {
         agent.isStopped = true;
-        target = null;
     }
 }

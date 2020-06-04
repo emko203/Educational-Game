@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerMotor))]
 
@@ -16,7 +17,6 @@ public class PlayerMovementController : MonoBehaviour
 
     private PlayerMotor motor;
     private bool mouseDown = false;
-    private bool hasSpawnedParticles = false;
     private Vector2 mousePos = Vector2.zero;
 
     private void Start()
@@ -63,7 +63,7 @@ public class PlayerMovementController : MonoBehaviour
                     motor.MoveToInteractable(interactable.transform.position, interactable, distance);
                 }
 
-            }
+            }         
             else
             {
                 //Just move to point on ground
@@ -78,7 +78,6 @@ public class PlayerMovementController : MonoBehaviour
     {
        // context.action.performed += ctx => mousePos = ctx.ReadValue<Vector2>();
        // context.action.canceled += ctx => mousePos = Vector2.zero;
-
     }
 
     public void PassMouseButtonClick(InputAction.CallbackContext context)
