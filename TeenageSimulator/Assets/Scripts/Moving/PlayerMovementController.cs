@@ -4,25 +4,22 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(NavMeshAgent), typeof(ParticleSpawner))]
+[RequireComponent(typeof(PlayerMotor))]
+
 public class PlayerMovementController : MonoBehaviour
 {
     public Camera cam;
-
-    public Interactable target;
-
     public LayerMask MovementMask;
 
-    private NavMeshAgent agent;
-    private ParticleSpawner particleSpawner;
+    private PlayerMotor motor;
     private bool mouseDown = false;
     private bool hasSpawnedParticles = false;
     private Vector2 mousePos = Vector2.zero;
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        particleSpawner = GetComponent<ParticleSpawner>();
+        motor = GetComponent<PlayerMotor>();
+        
     }
 
     // Update is called once per frame
@@ -43,55 +40,36 @@ public class PlayerMovementController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 300, MovementMask))
         {
-            StopAllCoroutines();
-            agent.isStopped = false;
-
             Interactable interactable = hit.collider.GetComponent<Interactable>();
 
             if (interactable != null)
             {
                 //Clicked on interactable
 
+                //Calculate distance to the interactable
                 float distance = Vector3.Distance(transform.position, interactable.transform.position);
 
                 if (distance < interactable.radius)
                 {
-                    //In range
+                    //In range so we just handle the interaction
                     interactable.HandleInteraction();
                 }
                 else
                 {
-                    //Not in range
-                    agent.destination = hit.point;
-                    StartCoroutine(CheckIfInRadius(interactable, distance));
+                    //Not in range so we move toward interactable
+                    motor.MoveToInteractable(interactable.transform.position, interactable, distance);
                 }
 
             }
             else
             {
-                //just move to point
-                agent.destination = hit.point;
-                if (!hasSpawnedParticles)
-                    {
-                        particleSpawner.SpawnMovementParticles(hit.point);
-                        hasSpawnedParticles = true;
-                    }
+                //Just move to point on ground
+                motor.MoveToDestination(hit.point);
             }
         }
     }
 
-    private IEnumerator CheckIfInRadius(Interactable target, float startDistance)
-    {
-        float distance = startDistance;
-
-        while(distance >= target.radius)
-        {
-            distance = Vector3.Distance(transform.position, target.transform.position);
-            yield return null;
-        }
-        agent.isStopped = true;
-        target.HandleInteraction();
-    }
+    
 
     public void PassMousePosition(InputAction.CallbackContext context)
     {

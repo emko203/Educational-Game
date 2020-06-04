@@ -90,10 +90,11 @@ GameObject:
   - component: {fileID: 8201988608738559450}
   - component: {fileID: 8201988608738559449}
   - component: {fileID: 8201988608738559445}
+  - component: {fileID: 2475758382089039927}
   - component: {fileID: 4335126817935037379}
-  - component: {fileID: 230122810850077472}
   - component: {fileID: 4669745811875045362}
   - component: {fileID: 3930164827412755276}
+  - component: {fileID: 4394542811110327630}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -146,6 +147,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &2475758382089039927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8201988608738559454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57aba13014dbe184fabffaceb1adaee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  MovementMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &4335126817935037379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +231,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 230122810850077472}
+      - m_Target: {fileID: 2475758382089039927}
         m_MethodName: PassMousePosition
         m_Mode: 0
         m_Arguments:
@@ -229,7 +246,7 @@ MonoBehaviour:
     m_ActionName: Player/MousePosition[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 230122810850077472}
+      - m_Target: {fileID: 2475758382089039927}
         m_MethodName: PassMouseButtonClick
         m_Mode: 0
         m_Arguments:
@@ -247,22 +264,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &230122810850077472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8201988608738559454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57aba13014dbe184fabffaceb1adaee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  MovementMask:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!114 &4669745811875045362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,3 +300,15 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4394542811110327630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8201988608738559454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3af2d08e9168894690f358c0ed69505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
