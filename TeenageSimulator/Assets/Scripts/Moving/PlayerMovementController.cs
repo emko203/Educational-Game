@@ -50,7 +50,8 @@ public class PlayerMovementController : MonoBehaviour
 
                 if (interactable != null)
                 {
-                    //Clicked on interactable
+                    //Clicked on interactable so we spawn particle
+                    motor.SpawnInteractableParticle(interactable.transform.position);
 
                     //Calculate distance to the interactable
                     float distance = Vector3.Distance(transform.position, interactable.transform.position);

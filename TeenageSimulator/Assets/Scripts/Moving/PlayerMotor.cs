@@ -7,15 +7,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent), typeof(ParticleSpawner))]
 public class PlayerMotor : MonoBehaviour
 {
-    [SerializeField]
-    private float TurningSpeed;
-
-    [SerializeField]
-    private float MaximumSpeed;
-
-    [SerializeField]
-    private ObstacleAvoidanceType AvoidanceType;
-
     private NavMeshAgent agent;
 
     private Interactable target;
@@ -28,9 +19,6 @@ public class PlayerMotor : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         particleSpawner = GetComponent<ParticleSpawner>();
-
-        agent.speed = MaximumSpeed;
-        agent.obstacleAvoidanceType = AvoidanceType;
     }
 
     public void SetSpawnParticles(bool value)
@@ -57,6 +45,15 @@ public class PlayerMotor : MonoBehaviour
         if (!hasSpawnedParticles)
         {
             particleSpawner.SpawnMovementParticles(destination);
+            SetSpawnParticles(true);
+        }
+    }
+
+    public void SpawnInteractableParticle(Vector3 destination)
+    {
+        if (!hasSpawnedParticles)
+        {
+            particleSpawner.SpawnInteractableClickParticles(destination);
             SetSpawnParticles(true);
         }
     }
