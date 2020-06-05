@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryOpener : MonoBehaviour
 {
     public GameObject inventoryUI;
-    bool active;
+    bool active = false;
     public void OpenCloseInventory()
     {
         if (inventoryUI != null && active == false)

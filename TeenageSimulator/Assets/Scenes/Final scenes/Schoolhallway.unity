@@ -1655,6 +1655,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 350395391965035691, guid: 1901a83306d38364cbc364f00003b8a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.5999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 350395391965035691, guid: 1901a83306d38364cbc364f00003b8a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.099976
+      objectReference: {fileID: 0}
     - target: {fileID: 2475758382089039927, guid: 1901a83306d38364cbc364f00003b8a8,
         type: 3}
       propertyPath: cam
@@ -1679,6 +1689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869873545460119006, guid: 1901a83306d38364cbc364f00003b8a8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8201988608738559450, guid: 1901a83306d38364cbc364f00003b8a8,
         type: 3}
