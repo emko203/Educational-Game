@@ -276,7 +276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6dbd039759df2d44af91048f4cbcfb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementIndicator: {fileID: 1204649774233346151, guid: facd3a5aecd97ca4482689029e9dee1a,
+  MovementIndicator: {fileID: 6036603648890212038, guid: d7c4ed4e039c2a441b72f8fdc7a5fa91,
+    type: 3}
+  InteractableIndicator: {fileID: 3903245551805531096, guid: 437af3a1d4777214888281a8911e1b9a,
     type: 3}
 --- !u!195 &3930164827412755276
 NavMeshAgent:
@@ -312,3 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3af2d08e9168894690f358c0ed69505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurningSpeed: 0
+  MaximumSpeed: 0
+  AvoidanceType: 0
