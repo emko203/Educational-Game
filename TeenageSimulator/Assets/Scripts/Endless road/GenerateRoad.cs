@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GenerateRoad : MonoBehaviour
@@ -7,9 +8,10 @@ public class GenerateRoad : MonoBehaviour
     public GameObject road;
     public float interval;
 
+    private List<GameObject> tiles = new List<GameObject>();
+
     void Start()
     {
-        //Instantiate(road, new Vector3(0, 0, 0), Quaternion.identity);
         coroutine = WaitAndInstantiate(interval);
         StartCoroutine(coroutine);
     }
@@ -20,11 +22,12 @@ public class GenerateRoad : MonoBehaviour
         while (true)
         {          
             yield return new WaitForSeconds(waitTime);
-            pos += road.GetComponent<Tile>().GetSpawnPosition().position.z;
-            GameObject clone = Instantiate(road, new Vector3(pos, 0, 0), Quaternion.identity);
-            Destroy(clone, 10);
-            print(pos);
+            if(tiles.Count < 10)
+            {
+                pos += road.GetComponent<Tile>().GetSpawnPosition().position.z;
+                GameObject clone = Instantiate(road, new Vector3(pos, 0, 0), Quaternion.identity);
+                tiles.Add(clone);
+            }
         }
-        
     }
 }

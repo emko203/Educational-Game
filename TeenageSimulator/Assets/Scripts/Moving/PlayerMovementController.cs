@@ -72,8 +72,8 @@ public class PlayerMovementController : MonoBehaviour
                     motor.MoveToDestination(hit.point);
                 }
             }
-        }
     }
+}
 
     
 
