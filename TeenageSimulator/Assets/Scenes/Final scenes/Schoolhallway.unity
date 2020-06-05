@@ -21781,7 +21781,7 @@ PrefabInstance:
     - target: {fileID: 8130969993469134598, guid: f9c7b5f748129e745828b2d75dd0e07a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -96.08
+      value: -96.2
       objectReference: {fileID: 0}
     - target: {fileID: 8130969993469134598, guid: f9c7b5f748129e745828b2d75dd0e07a,
         type: 3}
@@ -29461,6 +29461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trashcan (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430904520574074595, guid: fe155a43a294b064797018c95dee9c19,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8347075811143582886, guid: fe155a43a294b064797018c95dee9c19,
         type: 3}
