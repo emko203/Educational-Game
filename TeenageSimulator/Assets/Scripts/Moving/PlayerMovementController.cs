@@ -39,8 +39,8 @@ public class PlayerMovementController : MonoBehaviour
     private void MoveCharacter(Vector2 mousePosition)
     {
         //if we have the mouse over our ui system we dont interact with the world
-        if (!EventSystem.current.IsPointerOverGameObject())
-        {
+        //if (!EventSystem.current.IsPointerOverGameObject())
+        //{
             Ray ray = cam.ScreenPointToRay(mousePosition);
             RaycastHit hit;
 
@@ -72,7 +72,7 @@ public class PlayerMovementController : MonoBehaviour
                     motor.MoveToDestination(hit.point);
                 }
             }
-        }
+        //}
     }
 
     
