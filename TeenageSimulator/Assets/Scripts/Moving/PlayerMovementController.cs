@@ -61,11 +61,9 @@ public class PlayerMovementController : MonoBehaviour
                         //In range so we just handle the interaction
                         interactable.HandleInteraction();
                     }
-                    else
-                    {
-                        //Not in range so we move toward interactable
-                        motor.MoveToInteractable(interactable.transform.position, interactable, distance);
-                    }
+
+                    //Make sure we face the interactable or move to it if we are not in range
+                    motor.MoveToInteractable(interactable.transform.position, interactable, distance);
 
                 }
                 else
