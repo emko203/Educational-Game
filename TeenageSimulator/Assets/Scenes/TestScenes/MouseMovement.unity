@@ -17152,6 +17152,12 @@ PrefabInstance:
       propertyPath: TurningSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4669745811875045362, guid: 1901a83306d38364cbc364f00003b8a8,
+        type: 3}
+      propertyPath: InteractableIndicator
+      value: 
+      objectReference: {fileID: 1204649774233346151, guid: facd3a5aecd97ca4482689029e9dee1a,
+        type: 3}
     - target: {fileID: 8201988608738559450, guid: 1901a83306d38364cbc364f00003b8a8,
         type: 3}
       propertyPath: m_LocalPosition.x
