@@ -21,7 +21,6 @@ public class ObjectTransparancyHandler : MonoBehaviour
     private RaycastHit SendRayToCamera()
     {
         Ray ray = new Ray(transform.position, cam.ScreenToWorldPoint(cam.transform.position));
-        Debug.DrawRay(transform.position, cam.ScreenToWorldPoint(cam.transform.position));
         RaycastHit hitInfo;
         Physics.Raycast(ray, out hitInfo, 300, transparentMask);
         return hitInfo;
