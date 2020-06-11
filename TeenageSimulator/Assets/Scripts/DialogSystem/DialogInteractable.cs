@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +14,12 @@ public class DialogInteractable : Interactable
     private Button OptionButton;
     [SerializeField]
     private Canvas canvas;
+    [SerializeField]
+    private List<Bubble> lstBubbles = new List<Bubble>();
+
     private List<GameObject> ButtonInstances = new List<GameObject>();
+
+
 
     public void HandleDialog()
     {
@@ -25,12 +31,39 @@ public class DialogInteractable : Interactable
     public override void HandleInteraction()
     {
         HandleDialog();
+        SpawnBubble();
+    }
+
+    private Bubble GetBubbleByType(EnumConversationType type)
+    {
+        foreach (Bubble b in lstBubbles)
+        {
+            if (b.ConversationType==type)
+            {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    private void SpawnBubble()
+    {
+        GetBubbleByType(TargetDialog.ConversationType).ShowBubble();       
+    }
+
+    private void HideBubbles() 
+    {
+        foreach (Bubble b in lstBubbles)
+        {
+            b.HideBubble();
+        }
     }
 
     public override void EndInteraction()
     {
         TextBox.gameObject.SetActive(false);
         CleanUpButtons();
+        HideBubbles();
     }
 
     private void GenerateOptionButtons()
