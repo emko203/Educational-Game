@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,10 +15,12 @@ public class Option : ScriptableObject
 
     public Dialog LinkedDialog { get => linkedDialog; set => linkedDialog = value; }
     public string Text { get => text; set => text = value; }
-
+    [Serializable]
     private class StatChange
     {
+        [SerializeField]
         private EnumStats Stat;
+        [SerializeField]
         private int ChangeAmount;
         public StatChange(EnumStats targetStat, int amount)
         {

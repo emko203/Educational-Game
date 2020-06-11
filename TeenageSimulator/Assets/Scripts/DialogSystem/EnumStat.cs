@@ -1,4 +1,7 @@
-﻿public enum EnumStats
+﻿using System;
+
+[Serializable]
+public enum EnumStats
 {
     Happiness
 }
