@@ -107,3 +107,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5.7
+  hoveIntensity: 1.5
+  mesh: {fileID: 7430904520574074595}

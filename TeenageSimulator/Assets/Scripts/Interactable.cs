@@ -6,6 +6,9 @@ public class Interactable : MonoBehaviour
 {
     [Range(1,100)]
     public float radius = 3f;
+    [Range(0.0f, 10.0f)]
+    public float hoverIntensity = 1.5f;
+    public GameObject mesh;
     
     [HideInInspector]
     public bool IsActiveAndInteractable = true;
@@ -33,5 +36,17 @@ public class Interactable : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position,radius);
+    }
+
+    void OnMouseOver()
+    {
+        Debug.Log("Mouse is over GameObject.");
+        mesh.GetComponent<Renderer>().material.color = new Color(hoverIntensity, hoverIntensity, hoverIntensity);
+    }
+
+    void OnMouseExit()
+    {
+        Debug.Log("Mouse is no longer on GameObject.");
+        mesh.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f);
     }
 }
