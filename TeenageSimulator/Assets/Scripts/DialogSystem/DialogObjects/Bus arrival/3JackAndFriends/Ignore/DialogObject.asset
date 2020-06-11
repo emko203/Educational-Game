@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DialogObject
   m_EditorClassIdentifier: 
   text: Laat ik maar niks zeggen misschien laten ze me dan met rust.
-  options: []
+  options:
+  - {fileID: 11400000, guid: ddc1c336006c8d54e8a9999e21295576, type: 2}
   ConversationType: 0

@@ -5,6 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class TriggerInteractable : DialogInteractable
 {
+    [SerializeField]
+    private int MaxInteractions;
+
+    private int currentInteractions = 0;
+
     private void Awake()
     {
         setRangeOfCollider();
@@ -15,26 +20,32 @@ public class TriggerInteractable : DialogInteractable
         SphereCollider collider = GetComponent<SphereCollider>();
 
         collider.radius = this.radius;
-    }
-
-    public override void EndInteraction()
-    {
-        base.EndInteraction();
-    }
-
-    public override void HandleInteraction()
-    {
-        base.HandleInteraction();
+        collider.isTrigger = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerMotor player = other.gameObject.GetComponent<PlayerMotor>();
-
-        if (player != null)
+        if (IsActiveAndInteractable)
         {
-            HandleInteraction();
-            player.StopMoving();
+            PlayerMotor player = other.gameObject.GetComponent<PlayerMotor>();
+
+            if (player != null)
+            {
+                HandleInteraction();
+                player.SetTarget(this);
+                player.StopMoving();
+            }
+
+            CheckIfStillInteractable();
+        }
+    }
+
+    private void CheckIfStillInteractable()
+    {
+        currentInteractions++;
+        if (currentInteractions >= MaxInteractions)
+        {
+            DeactivateInteractable();
         }
     }
 }

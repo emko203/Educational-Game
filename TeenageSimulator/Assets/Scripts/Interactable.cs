@@ -6,10 +6,23 @@ public class Interactable : MonoBehaviour
 {
     [Range(1,100)]
     public float radius = 3f;
+    
+    [HideInInspector]
+    public bool IsActiveAndInteractable = true;
 
     public virtual void HandleInteraction()
     {
 
+    }
+
+    public virtual void ActivateInteractable()
+    {
+        IsActiveAndInteractable = true;
+    }
+
+    public virtual void DeactivateInteractable()
+    {
+        IsActiveAndInteractable = false;
     }
 
     public virtual void EndInteraction()

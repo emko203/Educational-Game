@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
-  m_Name: Startlesson
+  m_Name: StartLesson
   m_EditorClassIdentifier: 
-  text: 
+  text: Jongens kom op pak jullie boeken. Ik wil met de les beginnen.
   options: []
-  ConversationType: 0
+  ConversationType: 1
