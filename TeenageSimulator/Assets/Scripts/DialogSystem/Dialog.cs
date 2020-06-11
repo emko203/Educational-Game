@@ -9,6 +9,8 @@ public class Dialog : ScriptableObject
     private string text;
     [SerializeField]
     private List<Option> options;
+    [SerializeField]
+    private EnumConversationType ConversationType;
 
     public string Text { get => text;}
     public List<Option> Options { get => options;}
