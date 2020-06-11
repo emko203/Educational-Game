@@ -3,5 +3,6 @@
 [Serializable]
 public enum EnumStats
 {
-    Happiness
+    HAPPINESS,
+    BULLY_LEVEL
 }

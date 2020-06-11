@@ -67,9 +67,14 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
+    public void SetTarget(Interactable TargetInteractable)
+    {
+        target = TargetInteractable;
+    }
+
     private IEnumerator CheckIfInRadius(Interactable targetToMoveto, float startDistance)
     {
-        target = targetToMoveto;
+        SetTarget(targetToMoveto);
 
         float distance = startDistance;
 
