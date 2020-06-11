@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum EnumConversationType
 {
-    Thinking,
-    Speech,
-    Whisper
+    THINKING,
+    SPEECH,
+    WHISPER
 }
