@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Goedemorgen peter. Goed optijd zoals altijd. Ga lekker zitten jongen.
   options: []
-  ConversationType: 1
+  conversationType: 1

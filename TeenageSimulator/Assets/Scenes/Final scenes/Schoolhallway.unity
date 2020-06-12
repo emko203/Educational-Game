@@ -6066,12 +6066,19 @@ PrefabInstance:
       propertyPath: DoesSpawnBubbles
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425165537013819976, guid: 2f3e27eecb190e44a9af50723c394274,
+        type: 3}
+      propertyPath: TargetDialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cf890994ea46b0499da08c3747885d2,
+        type: 2}
     - target: {fileID: 1616243674109227901, guid: 2f3e27eecb190e44a9af50723c394274,
         type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 1693018667}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1425165537013819976, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
 --- !u!1001 &216353554
 PrefabInstance:
@@ -26386,6 +26393,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf73496bca04113409ca486813ee02c8, type: 3}
+--- !u!1 &1206416448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316981293597076, guid: 2f3e27eecb190e44a9af50723c394274,
+    type: 3}
+  m_PrefabInstance: {fileID: 214658553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1206416449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206416448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e7d70ef12f5b44896c2035ef7012a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 21.6
+  hoverIntensity: 1.5
+  IsActiveAndInteractable: 1
+  TargetDialog: {fileID: 11400000, guid: 1cf890994ea46b0499da08c3747885d2, type: 2}
+  TextBox: {fileID: 878114035}
+  TextBoxGraphic: {fileID: 324110186}
+  OptionAnchor: {fileID: 693114772}
+  OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
+    type: 3}
+  canvas: {fileID: 532700611}
+  DoesSpawnBubbles: 0
+  MaxInteractions: 1
+--- !u!135 &1206416450
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206416448}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6.16
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1207626651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5759603893138608246, guid: 4753cf854e2fcae4dadffc05f7af1c38,

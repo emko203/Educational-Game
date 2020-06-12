@@ -23,10 +23,10 @@ public class TriggerInteractable : DialogInteractable
 
     private void setRangeOfCollider()
     {
-        SphereCollider collider = GetComponent<SphereCollider>();
+        //SphereCollider collider = GetComponent<SphereCollider>();
 
-        collider.radius = this.radius;
-        collider.isTrigger = true;
+        //collider.radius = radius;
+        //collider.isTrigger = true;
     }
 
     private void OnTriggerEnter(Collider other)

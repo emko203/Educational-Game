@@ -511,6 +511,7 @@ MonoBehaviour:
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 0}
+  DoesSpawnBubbles: 1
 --- !u!114 &5698050567598065068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2040,7 +2041,7 @@ PrefabInstance:
     - target: {fileID: 6318222085394663394, guid: a484d7ed88ec6ef489d2d8b11b5f72ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 6318222085394663394, guid: a484d7ed88ec6ef489d2d8b11b5f72ec,
         type: 3}
