@@ -11064,6 +11064,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a59f82c05726743816deb7e9107129, type: 3}
+--- !u!224 &515602401 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8180269324154345551, guid: 1901a83306d38364cbc364f00003b8a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 79608192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &517002269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4059606452563695188, guid: c9a59f82c05726743816deb7e9107129,
@@ -12443,6 +12449,8 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
   TextBox: {fileID: 654211014}
+  TextBoxGraphic: {fileID: 2078328978}
+  OptionAnchor: {fileID: 515602401}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 695529718}
@@ -12652,10 +12660,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 6.8
   hoverIntensity: 1.5
-  mesh: {fileID: 0}
+  mesh: {fileID: 614310101}
   IsActiveAndInteractable: 1
-  TargetDialog: {fileID: 11400000, guid: 23828a3859569d8449b32574858c92ea, type: 2}
+  TargetDialog: {fileID: 11400000, guid: 1f6fdd2a8cd2d0a4998640a920a5ada7, type: 2}
   TextBox: {fileID: 654211014}
+  TextBoxGraphic: {fileID: 2078328978}
+  OptionAnchor: {fileID: 515602401}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 624821264}
@@ -20045,6 +20055,8 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
   TextBox: {fileID: 654211014}
+  TextBoxGraphic: {fileID: 2078328978}
+  OptionAnchor: {fileID: 515602401}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 1560301183}
@@ -21072,6 +21084,8 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
   TextBox: {fileID: 654211014}
+  TextBoxGraphic: {fileID: 2078328978}
+  OptionAnchor: {fileID: 515602401}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 1230748349}
@@ -27930,6 +27944,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2100495318}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1264973704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1290121540944134445, guid: d6c7d3cf15d273d488b5cb3893204b7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7280723532147186692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1264973707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264973704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.000003, y: 12, z: 20.000004}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1265841679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32771,6 +32804,8 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
   TextBox: {fileID: 654211014}
+  TextBoxGraphic: {fileID: 2078328978}
+  OptionAnchor: {fileID: 515602401}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 2123846645}
@@ -33575,6 +33610,8 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
   TextBox: {fileID: 654211014}
+  TextBoxGraphic: {fileID: 2078328978}
+  OptionAnchor: {fileID: 515602401}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 1175568278}
@@ -42355,6 +42392,8 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
   TextBox: {fileID: 654211014}
+  TextBoxGraphic: {fileID: 2078328978}
+  OptionAnchor: {fileID: 515602401}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 1175568278}
@@ -43941,6 +43980,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a59f82c05726743816deb7e9107129, type: 3}
+--- !u!114 &2078328978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6831184827593314321, guid: 1901a83306d38364cbc364f00003b8a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 79608192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2078804124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45088,10 +45139,12 @@ MonoBehaviour:
   mesh: {fileID: 657265759}
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
-  TextBox: {fileID: 0}
+  TextBox: {fileID: 654211014}
+  TextBoxGraphic: {fileID: 2078328978}
+  OptionAnchor: {fileID: 515602401}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
-  canvas: {fileID: 0}
+  canvas: {fileID: 624821264}
 --- !u!4 &2144210140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4580766925885248, guid: 2f3e27eecb190e44a9af50723c394274,
@@ -45422,6 +45475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290121540944134445, guid: d6c7d3cf15d273d488b5cb3893204b7b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4961595951473686166, guid: d6c7d3cf15d273d488b5cb3893204b7b,
         type: 3}
