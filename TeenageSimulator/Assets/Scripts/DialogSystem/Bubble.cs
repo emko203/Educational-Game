@@ -5,8 +5,6 @@ using UnityEngine;
 public class Bubble : MonoBehaviour
 {
     [SerializeField]
-    private SpriteRenderer bubbleSprite;
-    [SerializeField]
     private EnumConversationType conversationType;
 
     public EnumConversationType ConversationType { get => conversationType; }

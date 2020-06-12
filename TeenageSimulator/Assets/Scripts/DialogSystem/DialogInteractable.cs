@@ -14,12 +14,16 @@ public class DialogInteractable : Interactable
     private Button OptionButton;
     [SerializeField]
     private Canvas canvas;
-    [SerializeField]
-    private List<Bubble> lstBubbles = new List<Bubble>();
 
+    private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
 
-
+    private void Awake()
+    {
+        lstBubbles = GetComponentInChildren<BubbleHelper>().LstBubbles;
+        
+        HideBubbles();
+    }
 
     public void HandleDialog()
     {

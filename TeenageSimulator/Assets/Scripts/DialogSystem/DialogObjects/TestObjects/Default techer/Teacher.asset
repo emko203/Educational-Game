@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Hallo Peter
   options: []
+  conversationType: 1
