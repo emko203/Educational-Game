@@ -813,11 +813,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorTile (155)
       objectReference: {fileID: 0}
+    - target: {fileID: 4947021226653258012, guid: 69f528ea21fe34146882dcb490a289d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4947021226653258014, guid: 69f528ea21fe34146882dcb490a289d0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7334f8071e069d941b26711c5349ab81, type: 2}
+    - target: {fileID: 4947021226653258014, guid: 69f528ea21fe34146882dcb490a289d0,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69f528ea21fe34146882dcb490a289d0, type: 3}
 --- !u!1001 &24590845
@@ -12430,11 +12440,12 @@ MonoBehaviour:
   radius: 5
   hoverIntensity: 1.5
   mesh: {fileID: 2049703472}
+  IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
-  TextBox: {fileID: 1538150063}
+  TextBox: {fileID: 654211014}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
-  canvas: {fileID: 2047865818}
+  canvas: {fileID: 695529718}
 --- !u!136 &599593928
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12640,6 +12651,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 6.8
+  hoverIntensity: 1.5
+  mesh: {fileID: 0}
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: 23828a3859569d8449b32574858c92ea, type: 2}
   TextBox: {fileID: 654211014}
@@ -12968,7 +12981,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733668291}
-  m_RootOrder: 495
+  m_RootOrder: 502
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &633652151
 PrefabInstance:
@@ -15403,22 +15416,23 @@ Transform:
   - {fileID: 603669342}
   - {fileID: 402807638}
   - {fileID: 178255482}
-  - {fileID: 832663804}
+  - {fileID: 614310102}
   - {fileID: 2117102777}
   - {fileID: 1186426260}
   - {fileID: 186797512}
   - {fileID: 1518997261}
   - {fileID: 2038610065}
   - {fileID: 478231676}
+  - {fileID: 832663804}
   - {fileID: 1614152780}
   - {fileID: 1011080225}
-  - {fileID: 631034538}
   - {fileID: 1415559957}
   - {fileID: 59803846}
   - {fileID: 1283783610}
   - {fileID: 1341689109}
   - {fileID: 319709625}
   - {fileID: 180527657}
+  - {fileID: 631034538}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20028,11 +20042,12 @@ MonoBehaviour:
   radius: 5
   hoverIntensity: 1.5
   mesh: {fileID: 897216603}
+  IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
-  TextBox: {fileID: 1538150063}
+  TextBox: {fileID: 654211014}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
-  canvas: {fileID: 2047865818}
+  canvas: {fileID: 1560301183}
 --- !u!136 &897216607
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21054,11 +21069,12 @@ MonoBehaviour:
   radius: 5
   hoverIntensity: 1.5
   mesh: {fileID: 671326730}
+  IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
-  TextBox: {fileID: 1538150063}
+  TextBox: {fileID: 654211014}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
-  canvas: {fileID: 2047865818}
+  canvas: {fileID: 1230748349}
 --- !u!114 &951255784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22017,7 +22033,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733668291}
-  m_RootOrder: 494
+  m_RootOrder: 495
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1013491459
 PrefabInstance:
@@ -32752,11 +32768,12 @@ MonoBehaviour:
   radius: 5
   hoverIntensity: 1.5
   mesh: {fileID: 1913360047}
+  IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
-  TextBox: {fileID: 1538150063}
+  TextBox: {fileID: 654211014}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
-  canvas: {fileID: 2047865818}
+  canvas: {fileID: 2123846645}
 --- !u!136 &1483720662
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -33454,18 +33471,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1530098448}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1538150063 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3476555717519416723, guid: 1901a83306d38364cbc364f00003b8a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 79608192}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1555861134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33567,11 +33572,12 @@ MonoBehaviour:
   radius: 5
   hoverIntensity: 1.5
   mesh: {fileID: 283620333}
+  IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
-  TextBox: {fileID: 1538150063}
+  TextBox: {fileID: 654211014}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
-  canvas: {fileID: 2047865818}
+  canvas: {fileID: 1175568278}
 --- !u!114 &1557961703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34627,7 +34633,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733668291}
-  m_RootOrder: 493
+  m_RootOrder: 494
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1620809822
 PrefabInstance:
@@ -42346,11 +42352,12 @@ MonoBehaviour:
   radius: 5
   hoverIntensity: 1.5
   mesh: {fileID: 744585892}
+  IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
-  TextBox: {fileID: 1538150063}
+  TextBox: {fileID: 654211014}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
-  canvas: {fileID: 2047865818}
+  canvas: {fileID: 1175568278}
 --- !u!136 &1977108733
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -43478,12 +43485,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1221684340765481171, guid: f89ba4f862348bd46af04f051890b3f0,
     type: 3}
   m_PrefabInstance: {fileID: 1738878171}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &2047865818 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 2018620507799609232, guid: 1901a83306d38364cbc364f00003b8a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 79608192}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2049703472 stripped
 GameObject:
@@ -45085,11 +45086,12 @@ MonoBehaviour:
   radius: 5
   hoverIntensity: 1.5
   mesh: {fileID: 657265759}
+  IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
-  TextBox: {fileID: 1538150063}
+  TextBox: {fileID: 0}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
-  canvas: {fileID: 2047865818}
+  canvas: {fileID: 0}
 --- !u!4 &2144210140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4580766925885248, guid: 2f3e27eecb190e44a9af50723c394274,
