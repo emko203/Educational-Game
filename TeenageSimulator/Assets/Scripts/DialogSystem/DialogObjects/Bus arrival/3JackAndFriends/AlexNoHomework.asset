@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: AlexNoHomework
   m_EditorClassIdentifier: 
-  text: Ik heb mijn huiswerk niet af.
+  text: 'Alex: Ik heb mijn huiswerk niet af.'
   options:
   - {fileID: 11400000, guid: 3ff57508666faed4d92f5dde983aa07e, type: 2}
-  ConversationType: 2
+  conversationType: 0

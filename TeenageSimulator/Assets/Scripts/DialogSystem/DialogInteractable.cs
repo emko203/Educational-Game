@@ -18,6 +18,8 @@ public class DialogInteractable : Interactable
     private Button OptionButton;
     [SerializeField]
     private Canvas canvas;
+    [SerializeField]
+    private bool DoesSpawnBubbles = true;
 
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
@@ -31,16 +33,27 @@ public class DialogInteractable : Interactable
 
     public void HandleDialog()
     {
-        TextBox.text = TargetDialog.Text;
-        TextBox.gameObject.SetActive(true);
-        TextBoxGraphic.gameObject.SetActive(true);
-        GenerateOptionButtons();
+        if (TargetDialog != null)
+        {
+            TextBox.text = TargetDialog.Text;
+            TextBox.gameObject.SetActive(true);
+            TextBoxGraphic.gameObject.SetActive(true);
+
+            if (TargetDialog.Options.Count > 0)
+            {
+                GenerateOptionButtons();
+            }
+        }
     }
 
     public override void HandleInteraction()
     {
         HandleDialog();
-        SpawnBubble();
+
+        if (DoesSpawnBubbles)
+        {
+            SpawnBubble();
+        }
     }
 
     private Bubble GetBubbleByType(EnumConversationType type)

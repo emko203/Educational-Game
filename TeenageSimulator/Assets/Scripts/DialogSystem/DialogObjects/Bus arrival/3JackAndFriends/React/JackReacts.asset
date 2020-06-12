@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: JackReacts
   m_EditorClassIdentifier: 
-  text: Wat maakt mij dat nou uit
+  text: 'Jack: Wat maakt mij dat nou uit!'
   options: []
-  ConversationType: 1
+  conversationType: 0

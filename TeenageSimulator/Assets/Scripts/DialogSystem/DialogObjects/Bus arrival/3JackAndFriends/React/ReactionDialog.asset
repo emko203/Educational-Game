@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: ReactionDialog
   m_EditorClassIdentifier: 
-  text: Nou dat is gewoon de regen die mijn kleding nat heeft gemaakt hoor.
+  text: 'Peter: Nou dat is gewoon de regen die mijn kleding nat heeft gemaakt hoor.'
   options:
   - {fileID: 11400000, guid: 4f6a6900276abbe42a0ec26de1f442b7, type: 2}
-  ConversationType: 1
+  conversationType: 0
