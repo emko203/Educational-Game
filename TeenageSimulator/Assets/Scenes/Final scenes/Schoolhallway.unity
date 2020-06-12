@@ -12723,7 +12723,7 @@ MonoBehaviour:
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 532700611}
-  MaxInteractions: 0
+  MaxInteractions: 1
 --- !u!135 &614310104
 SphereCollider:
   m_ObjectHideFlags: 0
