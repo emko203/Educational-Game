@@ -506,6 +506,8 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: cbb01e22453ba854fadc288c0ec8f16b, type: 2}
   TextBox: {fileID: 0}
+  TextBoxGraphic: {fileID: 0}
+  OptionAnchor: {fileID: 0}
   OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
     type: 3}
   canvas: {fileID: 0}
