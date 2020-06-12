@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/MainMenu.unity
     guid: a4f2db4a59461cc45903e881466653ed
   - enabled: 1
+    path: Assets/Scenes/Final scenes/Bus.unity
+    guid: 12b173bb052b6ad47887919e6a4d8ea5
+  - enabled: 1
+    path: Assets/Scenes/Final scenes/SchoolOutdoor.unity
+    guid: 567b7f9bae2928a479163af489aa02f7
+  - enabled: 1
     path: Assets/Scenes/Final scenes/Schoolhallway.unity
     guid: 5a2f69e0a7cb9bb4fb7c88cd9a67053f
   - enabled: 1
