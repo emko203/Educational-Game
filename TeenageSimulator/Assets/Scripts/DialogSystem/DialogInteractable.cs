@@ -11,6 +11,10 @@ public class DialogInteractable : Interactable
     [SerializeField]
     private Text TextBox;
     [SerializeField]
+    private Image TextBoxGraphic;
+    [SerializeField]
+    private Transform OptionAnchor;
+    [SerializeField]
     private Button OptionButton;
     [SerializeField]
     private Canvas canvas;
@@ -29,6 +33,7 @@ public class DialogInteractable : Interactable
     {
         TextBox.text = TargetDialog.Text;
         TextBox.gameObject.SetActive(true);
+        TextBoxGraphic.gameObject.SetActive(true);
         GenerateOptionButtons();
     }
 
@@ -66,6 +71,7 @@ public class DialogInteractable : Interactable
     public override void EndInteraction()
     {
         TextBox.gameObject.SetActive(false);
+        TextBoxGraphic.gameObject.SetActive(false);
         CleanUpButtons();
         HideBubbles();
     }
@@ -90,8 +96,8 @@ public class DialogInteractable : Interactable
     private GameObject InstantiateOptionButton(int itterator)
     {
         Button buttonInstance = Instantiate(OptionButton, canvas.transform);
-        Vector2 centerPosition = canvas.pixelRect.center;
-        Vector2 newPosition = centerPosition - new Vector2(0, 40 * itterator);
+        Vector2 centerPosition = OptionAnchor.position;
+        Vector2 newPosition = centerPosition + new Vector2(250 * (itterator -1) + 80, 0);
         buttonInstance.transform.position = newPosition;
 
         return buttonInstance.gameObject;
