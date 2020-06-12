@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: StartLesson
   m_EditorClassIdentifier: 
-  text: Jongens kom op pak jullie boeken. Ik wil met de les beginnen.
+  text: 'Bart: Jongens kom op pak jullie boeken. Ik wil met de les beginnen.'
   options: []
-  ConversationType: 1
+  conversationType: 0

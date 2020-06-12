@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: DialogObject
   m_EditorClassIdentifier: 
-  text: Laat ik maar niks zeggen misschien laten ze me dan met rust.
+  text: 'Peter denkt: Laat ik maar niks zeggen misschien laten ze me dan met rust.'
   options:
   - {fileID: 11400000, guid: ddc1c336006c8d54e8a9999e21295576, type: 2}
-  ConversationType: 0
+  conversationType: 0

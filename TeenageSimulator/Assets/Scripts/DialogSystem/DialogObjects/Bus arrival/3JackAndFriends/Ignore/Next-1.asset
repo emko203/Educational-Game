@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Next-1
   m_EditorClassIdentifier: 
   text: Volgende
-  linkedDialog: {fileID: 11400000, guid: bf8c2653d3cd424499187283ca94f521, type: 2}
+  linkedDialog: {fileID: 0}
   changes:
   - Stat: 1
     ChangeAmount: -1

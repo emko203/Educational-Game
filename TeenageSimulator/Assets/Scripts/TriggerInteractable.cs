@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class TriggerInteractable : DialogInteractable
 {
+    [Header("TriggerInteractble")]
     [SerializeField]
     private int MaxInteractions;
 
@@ -13,6 +14,11 @@ public class TriggerInteractable : DialogInteractable
     private void Awake()
     {
         setRangeOfCollider();
+    }
+
+    public override void HandleInteraction()
+    {
+        base.HandleInteraction();
     }
 
     private void setRangeOfCollider()

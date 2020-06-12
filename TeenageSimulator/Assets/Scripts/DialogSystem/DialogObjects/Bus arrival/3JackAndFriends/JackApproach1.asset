@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: JackApproach1
   m_EditorClassIdentifier: 
-  text: Hey peter heb je nou in je broek geplast ?
+  text: 'Jack: Hey peter heb je nou in je broek geplast ?'
   options:
   - {fileID: 11400000, guid: 4a6d07d8c499209499e1e21792a5b035, type: 2}
   - {fileID: 11400000, guid: d9f2070ecd856404587ec050e6515549, type: 2}
-  ConversationType: 1
+  conversationType: 0
