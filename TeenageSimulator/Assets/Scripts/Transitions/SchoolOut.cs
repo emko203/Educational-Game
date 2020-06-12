@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SchoolInOutTransition : MonoBehaviour
+public class SchoolOut : MonoBehaviour
 {
     public string sceneToLoad;
 
@@ -14,4 +14,5 @@ public class SchoolInOutTransition : MonoBehaviour
             SceneManager.LoadScene(sceneToLoad);
         }
     }
+
 }
