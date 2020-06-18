@@ -19,6 +19,7 @@ public class PlayerMovementController : MonoBehaviour
     private PlayerMotor motor;
     private bool mouseDown = false;
     private Vector2 mousePos = Vector2.zero;
+    public Animator animator;
 
     private void Start()
     {
@@ -30,8 +31,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (mouseDown)
         {
-            mousePos = Input.mousePosition;
-
+            mousePos = Input.mousePosition;           
             MoveCharacter(mousePos);
         }
     }

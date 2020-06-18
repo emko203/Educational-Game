@@ -9,14 +9,25 @@ public class PlayerMotor : MonoBehaviour
 {
     private NavMeshAgent agent;
 
+    private AnimationTransition at;
+
     private Interactable target;
 
     private bool hasSpawnedParticles = false;
 
     private ParticleSpawner particleSpawner;
 
+    private void Update()
+    {
+        if (agent.destination == transform.position || agent.isStopped)
+        {
+            at.WalkingAnimation(false);
+        }        
+    }
+
     private void Start()
     {
+        at = GetComponent<AnimationTransition>();
         agent = GetComponent<NavMeshAgent>();
         particleSpawner = GetComponent<ParticleSpawner>();
     }
@@ -28,12 +39,12 @@ public class PlayerMotor : MonoBehaviour
 
     public void MoveToDestination(Vector3 destination)
     {
+        at.WalkingAnimation(true);
         EndInterAction();
-
         ClearCurrentTarget();
         StopMoving();
-        StopAllCoroutines();
 
+        StopAllCoroutines();
         agent.isStopped = false;
         agent.SetDestination(destination);
 
@@ -83,11 +94,11 @@ public class PlayerMotor : MonoBehaviour
             distance = Vector3.Distance(transform.position, target.transform.position);
             yield return null;
         }
-
+        
         if (target != null)
         {
             target.HandleInteraction();
-
+            
             //Player in range of target so we move to target
             StopMoving();
         }
