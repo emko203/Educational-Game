@@ -103,7 +103,11 @@ public class PlayerMotor : MonoBehaviour
 
     private void ClearCurrentTarget()
     {
-        target = null;
+        if (target != null && 
+            !target.TimedOut)
+        {
+            target = null;
+        }
     }
 
     public void StopMoving()

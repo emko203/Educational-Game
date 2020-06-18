@@ -46,8 +46,17 @@ public class DialogInteractable : Interactable
         }
     }
 
+    public void TurnTimeOutOn()
+    {
+        if (!TimedOut)
+        {
+            StartCoroutine(SetTimeOut());
+        }
+    }
+
     public override void HandleInteraction()
     {
+        TurnTimeOutOn();   
         HandleDialog();
 
         if (DoesSpawnBubbles)
@@ -83,10 +92,13 @@ public class DialogInteractable : Interactable
 
     public override void EndInteraction()
     {
-        TextBox.gameObject.SetActive(false);
-        TextBoxGraphic.gameObject.SetActive(false);
-        CleanUpButtons();
-        HideBubbles();
+        if (!TimedOut)
+        {
+            TextBox.gameObject.SetActive(false);
+            TextBoxGraphic.gameObject.SetActive(false);
+            CleanUpButtons();
+            HideBubbles();
+        }
     }
 
     private void GenerateOptionButtons()
