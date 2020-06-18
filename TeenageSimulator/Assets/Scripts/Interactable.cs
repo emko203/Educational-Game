@@ -7,12 +7,13 @@ public class Interactable : MonoBehaviour
     [Range(1,100)]
     public float radius = 3f;
 
+    public float TimeOutAfterTrigger;
+
     [Range(0.0f, 10.0f), SerializeField]
     private float hoverIntensity = 1.5f;
     
-    [HideInInspector]
-    public bool IsActiveAndInteractable = true;
-
+    [HideInInspector]public bool IsActiveAndInteractable = true;
+    [HideInInspector]public bool TimedOut = false;
     public virtual void HandleInteraction()
     {
 
@@ -32,6 +33,14 @@ public class Interactable : MonoBehaviour
     {
 
     }
+
+    public IEnumerator SetTimeOut()
+    {
+        TimedOut = true;
+        yield return new WaitForSeconds(TimeOutAfterTrigger);
+        TimedOut = false;
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
