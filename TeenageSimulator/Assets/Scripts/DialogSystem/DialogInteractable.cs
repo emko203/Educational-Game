@@ -56,6 +56,7 @@ public class DialogInteractable : Interactable
 
     public override void HandleInteraction()
     {
+        base.HandleInteraction();
         TurnTimeOutOn();   
         HandleDialog();
 
@@ -92,6 +93,7 @@ public class DialogInteractable : Interactable
 
     public override void EndInteraction()
     {
+        base.EndInteraction();
         if (!TimedOut)
         {
             TextBox.gameObject.SetActive(false);
