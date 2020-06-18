@@ -911,6 +911,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 7628277123625960441, guid: c7ffa6983e4391848bf28c28162511ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7628277123625960445, guid: c7ffa6983e4391848bf28c28162511ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5356,7 +5361,7 @@ PrefabInstance:
     - target: {fileID: 5339506310774702489, guid: 3d1ddfb794ca8ea46915cb65c56f8c89,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.57
+      value: 17.67
       objectReference: {fileID: 0}
     - target: {fileID: 5339506310774702489, guid: 3d1ddfb794ca8ea46915cb65c56f8c89,
         type: 3}
@@ -7849,6 +7854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SceneTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848945762530791897, guid: 64dbb8c495315c24796139658b31417a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7007809389860029596, guid: 64dbb8c495315c24796139658b31417a,
         type: 3}
