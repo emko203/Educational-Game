@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
+  m_Name: HallwayChoseAlex
+  m_EditorClassIdentifier: 
+  text: Hey Peter! Ik vind het niet cool dat je mijn zus in de problemen hebt gebracht
+    bij de les van Bart. Tijd voor jouw om een lesje te leren. Hier met jouw tas!
+    Jongens houd hem vast. Ik ga ervoor zorgen dat Peter te laat gaat komen voor
+    de volgende les.
+  options: []
+  conversationType: 1

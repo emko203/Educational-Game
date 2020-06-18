@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
-  m_Name: StartLesson
+  m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
+  m_Name: GoToLocker
   m_EditorClassIdentifier: 
-  text: 'Bart: Jongens kom op pak jullie boeken. Ik wil met de les beginnen.'
-  options: []
-  conversationType: 0
+  text: Ga naar het kluisje
+  linkedDialog: {fileID: 0}
+  changes: []
