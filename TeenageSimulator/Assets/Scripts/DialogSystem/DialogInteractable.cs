@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class DialogInteractable : Interactable
 {
@@ -24,6 +25,8 @@ public class DialogInteractable : Interactable
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
 
+    public RectTransform dialogBox;
+
     private void Awake()
     {
         lstBubbles = GetComponentInChildren<BubbleHelper>().LstBubbles;
@@ -38,6 +41,8 @@ public class DialogInteractable : Interactable
             TextBox.text = TargetDialog.Text;
             TextBox.gameObject.SetActive(true);
             TextBoxGraphic.gameObject.SetActive(true);
+
+            dialogBox.DOAnchorPos(Vector2.zero, 1f);
 
             if (TargetDialog.Options.Count > 0)
             {
@@ -83,6 +88,8 @@ public class DialogInteractable : Interactable
 
     public override void EndInteraction()
     {
+        dialogBox.DOAnchorPos(new Vector2(-650, 0), 1f);
+
         TextBox.gameObject.SetActive(false);
         TextBoxGraphic.gameObject.SetActive(false);
         CleanUpButtons();
