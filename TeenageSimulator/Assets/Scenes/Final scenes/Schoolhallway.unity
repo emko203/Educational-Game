@@ -10395,6 +10395,11 @@ PrefabInstance:
       propertyPath: MovementMask.m_Bits
       value: 1536
       objectReference: {fileID: 0}
+    - target: {fileID: 3271278563829026130, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -15.400024
+      objectReference: {fileID: 0}
     - target: {fileID: 3930164827412755276, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
       propertyPath: m_Radius
@@ -10405,6 +10410,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1411865174}
+    - target: {fileID: 5534347370561252661, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808433231618977308, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7869873545460119006, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -26440,7 +26455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 21.2
-  TimeOutAfterTrigger: 100
+  TimeOutAfterTrigger: 2
   hoverIntensity: 1.5
   IsActiveAndInteractable: 1
   TimedOut: 0
