@@ -38,7 +38,7 @@ public class Interactable : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position,radius);
     }
 
-    void OnMouseOver()
+    void OnMouseEnter()
     {
         Debug.Log("Mouse is over GameObject.");
         GetComponentInChildren<Renderer>().material.color = new Color(hoverIntensity, hoverIntensity, hoverIntensity);
