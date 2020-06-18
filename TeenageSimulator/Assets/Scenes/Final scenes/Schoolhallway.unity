@@ -5594,6 +5594,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1977108733, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1009729146511118, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -26433,7 +26437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e7d70ef12f5b44896c2035ef7012a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 21.6
+  radius: 21.2
   hoverIntensity: 1.5
   IsActiveAndInteractable: 1
   TargetDialog: {fileID: 11400000, guid: 1cf890994ea46b0499da08c3747885d2, type: 2}
@@ -26456,7 +26460,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6.16
+  m_Radius: 6.03
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1207626651 stripped
 Transform:
