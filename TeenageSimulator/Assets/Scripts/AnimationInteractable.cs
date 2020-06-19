@@ -5,11 +5,10 @@ using UnityEngine;
 public class AnimationInteractable : Interactable
 {
     public Animator animator;
-
-    public override void HandleInteraction()
+    public override void HandleInteraction(Transform player)
     {
 
-        base.HandleInteraction();
+        base.HandleInteraction(player);
     }
 
     public override void EndInteraction()
