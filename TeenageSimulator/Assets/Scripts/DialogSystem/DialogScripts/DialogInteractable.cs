@@ -14,10 +14,13 @@ public class DialogInteractable : Interactable
     private Transform OptionAnchor;
     private Button OptionButton;
     private Canvas canvas;
+    private StatHandler statHandler;
+    public bool DoesSpawnBubbles = true;
 
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
 
+    private RectTransform dialogBox;
 
     private void Awake()
     {
@@ -50,7 +53,19 @@ public class DialogInteractable : Interactable
         }
     }
 
+    public override void HandleInteraction(Transform player)
     {
+        DialogRequirementsContainer container = player.gameObject.GetComponent<DialogRequirementsContainer>();
+        TextBox = container.TextBox;
+        TextBoxGraphic = container.TextBoxGraphic;
+        OptionAnchor = container.OptionAnchor;
+        OptionButton = container.OptionButton;
+        canvas = container.canvas;
+        statHandler = container.statHandler;
+        dialogBox = container.dialogBox;
+
+        base.HandleInteraction(player);
+
         TurnTimeOutOn();   
         HandleDialog();
 
@@ -111,6 +126,12 @@ public class DialogInteractable : Interactable
 
             buttonInstance.GetComponentInChildren<Text>().text = option.Text;
             buttonInstance.GetComponent<Button>().onClick.AddListener(delegate { ChangeTargetDialog(option.LinkedDialog); });
+
+            foreach (Option.StatChange statChange in option.GetStatChanges())
+            {
+                buttonInstance.GetComponent<Button>().onClick.AddListener(delegate { statHandler.ChangeStat(statChange.GetChangeAmount(), statChange.GetStat()); });
+            }
+
             itterator++;
         }
     }
