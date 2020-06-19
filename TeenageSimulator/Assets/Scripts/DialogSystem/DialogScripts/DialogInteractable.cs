@@ -58,9 +58,9 @@ public class DialogInteractable : Interactable
         }
     }
 
-    public override void HandleInteraction()
+    public override void HandleInteraction(Transform player)
     {
-        base.HandleInteraction();
+        base.HandleInteraction(player);
         TurnTimeOutOn();   
         HandleDialog();
 

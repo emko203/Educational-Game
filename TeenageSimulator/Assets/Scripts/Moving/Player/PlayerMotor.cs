@@ -97,7 +97,7 @@ public class PlayerMotor : MonoBehaviour
         
         if (target != null)
         {
-            target.HandleInteraction();
+            target.HandleInteraction(transform);
             
             //Player in range of target so we move to target
             StopMoving();

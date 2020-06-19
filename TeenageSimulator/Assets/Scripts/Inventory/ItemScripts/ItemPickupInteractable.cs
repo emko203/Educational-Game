@@ -4,7 +4,7 @@ public class ItemPickupInteractable : Interactable
 {
     public Item item;
 
-    public override void HandleInteraction()
+    public override void HandleInteraction(Transform player)
     {
         PickUp();
     }
