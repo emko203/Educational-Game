@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
-    public virtual void HandleInteraction()
+    public virtual void HandleInteraction(Transform player)
     {
         if(agent != null)
         {
