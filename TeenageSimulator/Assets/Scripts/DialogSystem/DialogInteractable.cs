@@ -40,8 +40,6 @@ public class DialogInteractable : Interactable
         if (TargetDialog != null)
         {
             TextBox.text = TargetDialog.Text;
-            TextBox.gameObject.SetActive(true);
-            TextBoxGraphic.gameObject.SetActive(true);
 
             dialogBox.DOAnchorPos(Vector2.zero, 1f);
 
@@ -105,8 +103,6 @@ public class DialogInteractable : Interactable
         base.EndInteraction();
         if (!TimedOut)
         {
-            TextBox.gameObject.SetActive(false);
-            TextBoxGraphic.gameObject.SetActive(false);
             CleanUpButtons();
             HideBubbles();
         }
