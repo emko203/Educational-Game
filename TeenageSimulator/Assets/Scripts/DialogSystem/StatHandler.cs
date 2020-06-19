@@ -30,87 +30,55 @@ public class StatHandler : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start");
         happiness = happinessStart;
         bullyLevel = bullyLevelStart;
 
         bullyLevelSlider.maxValue = bullyLevelMax;
         happinessSlider.maxValue = happinessMax;
 
-        UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel);
-        UpdateStatGrapic(EnumStats.HAPPINESS, happiness);
+        UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel, bullyLevelMax);
+        UpdateStatGrapic(EnumStats.HAPPINESS, happiness, happinessMax);
     }
 
-    private void UpdateStatGrapic(EnumStats statToChange, int value)
+    private void UpdateStatGrapic(EnumStats statToChange, int value, int maxValue)
     {
         Slider toUpdate = GetSlider(statToChange);
 
         toUpdate.value = value;
 
-        SetSliderFill(statToChange);
+        float mappedValue = value;
+
+        SetSliderFill(statToChange, mappedValue);
     }
 
-    public void UpStat(int value, EnumStats statToChange)
+    public void ChangeStat(int value, EnumStats statToChange)
     {
         switch (statToChange)
         {
             case EnumStats.HAPPINESS:
-                happiness = AddaptValueToHigher(value, happiness, happinessMax, statToChange);
+                happiness = AddaptValue(value, happiness, happinessMax, 0, statToChange);
+                UpdateStatGrapic(EnumStats.HAPPINESS, happiness, happinessMax);
                 break;
             case EnumStats.BULLY_LEVEL:
-                bullyLevel = AddaptValueToHigher(value, bullyLevel, bullyLevelMax, statToChange);
+                bullyLevel = AddaptValue(value, bullyLevel, bullyLevelMax, 0, statToChange);
+                UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel, bullyLevelMax);
                 break;
             default:
                 break;
         }
     }
 
-    public void LowerStat(int value, EnumStats statToChange)
+    private int AddaptValue(int value, int ChangedValue, int MaxValue, int MinValue, EnumStats statToChange)
     {
-        switch (statToChange)
+        ChangedValue += value;
+        if(ChangedValue > MaxValue)
         {
-            case EnumStats.HAPPINESS:
-                happiness = AddaptValueToLower(value, happiness, statToChange);
-                break;
-            case EnumStats.BULLY_LEVEL:
-                bullyLevel = AddaptValueToLower(value, bullyLevel, statToChange);
-                break;
-            default:
-                break;
+            ChangedValue = MaxValue;
         }
-    }
-
-    //Up the value to a higher value but never higher then the maxvalue
-    private int AddaptValueToHigher(int value, int ChangedValue, int maxValue, EnumStats statToChange)
-    {
-        if (ChangedValue + value <= maxValue)
+        else if(ChangedValue < MinValue)
         {
-            ChangedValue -= value;
+            ChangedValue = MinValue;
         }
-        else
-        {
-            ChangedValue = maxValue;
-        }
-
-        UpdateStatGrapic(statToChange,ChangedValue);
-
-        return ChangedValue;
-    }
-
-    //Lower the value to a lower value but never lower then the 0
-    private int AddaptValueToLower(int value, int ChangedValue, EnumStats statToChange)
-    {
-        if (ChangedValue - value >= 0)
-        {
-            ChangedValue -= value;
-        }
-        else
-        {
-            ChangedValue = 0;
-        }
-
-        UpdateStatGrapic(statToChange, value);
-
         return ChangedValue;
     }
 
@@ -140,9 +108,10 @@ public class StatHandler : MonoBehaviour
         }
     }
 
-    private void SetSliderFill(EnumStats targetStat)
+    private void SetSliderFill(EnumStats targetStat, float value)
     {
-        Image targetImage = GetSlider(targetStat).fillRect.gameObject.GetComponent<Image>();
-        targetImage.color = GetGradient(targetStat).Evaluate(GetSlider(targetStat).value);
+        Slider targetSlider = GetSlider(targetStat);
+        Image targetImage = targetSlider.fillRect.gameObject.GetComponent<Image>();
+        targetImage.color = GetGradient(targetStat).Evaluate(value);
     }
 }
