@@ -15,7 +15,7 @@ public class DialogInteractable : Interactable
     private Button OptionButton;
     private Canvas canvas;
     private StatHandler statHandler;
-    private bool DoesSpawnBubbles = true;
+    public bool DoesSpawnBubbles = true;
 
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
