@@ -30,24 +30,25 @@ public class StatHandler : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start");
         happiness = happinessStart;
         bullyLevel = bullyLevelStart;
 
         bullyLevelSlider.maxValue = bullyLevelMax;
         happinessSlider.maxValue = happinessMax;
 
-        UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel);
-        UpdateStatGrapic(EnumStats.HAPPINESS, happiness);
+        UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel, bullyLevelMax);
+        UpdateStatGrapic(EnumStats.HAPPINESS, happiness, happinessMax);
     }
 
-    private void UpdateStatGrapic(EnumStats statToChange, int value)
+    private void UpdateStatGrapic(EnumStats statToChange, int value, int maxValue)
     {
         Slider toUpdate = GetSlider(statToChange);
 
         toUpdate.value = value;
 
-        SetSliderFill(statToChange);
+        float mappedValue = value;
+
+        SetSliderFill(statToChange, mappedValue);
     }
 
     public void ChangeStat(int value, EnumStats statToChange)
@@ -56,11 +57,11 @@ public class StatHandler : MonoBehaviour
         {
             case EnumStats.HAPPINESS:
                 happiness = AddaptValue(value, happiness, happinessMax, 0, statToChange);
-                UpdateStatGrapic(EnumStats.HAPPINESS, happiness);
+                UpdateStatGrapic(EnumStats.HAPPINESS, happiness, happinessMax);
                 break;
             case EnumStats.BULLY_LEVEL:
                 bullyLevel = AddaptValue(value, bullyLevel, bullyLevelMax, 0, statToChange);
-                UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel);
+                UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel, bullyLevelMax);
                 break;
             default:
                 break;
@@ -107,9 +108,10 @@ public class StatHandler : MonoBehaviour
         }
     }
 
-    private void SetSliderFill(EnumStats targetStat)
+    private void SetSliderFill(EnumStats targetStat, float value)
     {
-        Image targetImage = GetSlider(targetStat).fillRect.gameObject.GetComponent<Image>();
-        targetImage.color = GetGradient(targetStat).Evaluate(GetSlider(targetStat).value);
+        Slider targetSlider = GetSlider(targetStat);
+        Image targetImage = targetSlider.fillRect.gameObject.GetComponent<Image>();
+        targetImage.color = GetGradient(targetStat).Evaluate(value);
     }
 }
