@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5445553849887802529}
   - component: {fileID: 3574971923800795929}
   - component: {fileID: 5232285310856392122}
+  - component: {fileID: 3958130250774466023}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -27,9 +28,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986474082949835743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.9, y: 58.1, z: -105.51073}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7709222322641068298}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -91,5 +93,55 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.834579, y: 3.090362, z: 1.6999999}
-  m_Center: {x: -0.16513348, y: 2.09704, z: -1.222908}
+  m_Size: {x: 1.834579, y: 1.1939423, z: 1.7}
+  m_Center: {x: -0.0005005002, y: 0.60470927, z: 0.028352022}
+--- !u!114 &3958130250774466023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986474082949835743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f35a81f8619c4d4fb47df57d7cd4c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3.6
+  TimeOutAfterTrigger: 0
+  hoverIntensity: 1.5
+  MovesAfterInteraction: 0
+  IsActiveAndInteractable: 1
+  TimedOut: 0
+  animator: {fileID: 0}
+  target: {fileID: 7709222322641068298}
+--- !u!1 &3945622634145899439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7709222322641068298}
+  m_Layer: 0
+  m_Name: LookAtTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7709222322641068298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945622634145899439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.14, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 588361637898972882}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

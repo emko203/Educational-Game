@@ -19,10 +19,14 @@ public class PlayerMotor : MonoBehaviour
 
     private void Update()
     {
-        if (agent.destination == transform.position || agent.isStopped)
+        if (agent.enabled)
         {
-            at.WalkingAnimation(false);
-        }        
+            if (agent.destination == transform.position || agent.isStopped)
+            {
+                at.WalkingAnimation(false);
+            }
+        }
+             
     }
 
     private void Start()
@@ -39,16 +43,22 @@ public class PlayerMotor : MonoBehaviour
 
     public void MoveToDestination(Vector3 destination)
     {
-        at.WalkingAnimation(true);
-        EndInterAction();
-        ClearCurrentTarget();
-        StopMoving();
+       
+            EndInterAction();
 
-        StopAllCoroutines();
-        agent.isStopped = false;
-        agent.SetDestination(destination);
+        if (agent.enabled)
+        {
+            at.WalkingAnimation(true);
 
-        SpawnMoveParticles(destination);
+            ClearCurrentTarget();
+            StopMoving();
+
+            StopAllCoroutines();
+            agent.isStopped = false;
+            agent.SetDestination(destination);
+
+            SpawnMoveParticles(destination);
+        }
     }
 
     private void SpawnMoveParticles(Vector3 destination)
@@ -123,6 +133,9 @@ public class PlayerMotor : MonoBehaviour
 
     public void StopMoving()
     {
-        agent.isStopped = true;
+        if (agent.enabled)
+        {
+            agent.isStopped = true;
+        }        
     }
 }
