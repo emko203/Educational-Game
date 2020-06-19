@@ -10726,6 +10726,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2392053865092511378, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2475758382089039927, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
       propertyPath: cam
@@ -13142,12 +13147,6 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TimedOut: 0
   TargetDialog: {fileID: 11400000, guid: df6eee9c4ab238b498ffb822f64a9a0b, type: 2}
-  TextBox: {fileID: 878114035}
-  TextBoxGraphic: {fileID: 324110186}
-  OptionAnchor: {fileID: 693114772}
-  OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
-    type: 3}
-  canvas: {fileID: 532700611}
   DoesSpawnBubbles: 0
   MaxInteractions: 100
 --- !u!135 &614310104
@@ -27644,12 +27643,6 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TimedOut: 0
   TargetDialog: {fileID: 11400000, guid: 1cf890994ea46b0499da08c3747885d2, type: 2}
-  TextBox: {fileID: 878114035}
-  TextBoxGraphic: {fileID: 324110186}
-  OptionAnchor: {fileID: 693114772}
-  OptionButton: {fileID: 2264725005352897727, guid: 3421d740222ab6141a5bc03543876988,
-    type: 3}
-  canvas: {fileID: 532700611}
   DoesSpawnBubbles: 0
   MaxInteractions: 1
 --- !u!135 &1206416450

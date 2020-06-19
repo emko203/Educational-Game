@@ -21,6 +21,7 @@ public class DialogInteractable : Interactable
     private List<GameObject> ButtonInstances = new List<GameObject>();
 
     private RectTransform dialogBox;
+    private float timeBeforeHiding = 1f;
 
     private void Awake()
     {
@@ -34,6 +35,8 @@ public class DialogInteractable : Interactable
     {
         if (TargetDialog != null)
         {
+            dialogBox.gameObject.SetActive(true);
+
             TextBox.text = TargetDialog.Text;
 
             dialogBox.DOAnchorPos(Vector2.zero, 1f);
@@ -102,7 +105,8 @@ public class DialogInteractable : Interactable
 
     public override void EndInteraction()
     {
-        dialogBox.DOAnchorPos(new Vector2(-650, 0), 1f);
+        dialogBox.DOAnchorPos(new Vector2(-999, 0), timeBeforeHiding);
+        StartCoroutine(hidetextBox());
         CleanUpButtons();
         HideBubbles();
         base.EndInteraction();
@@ -111,6 +115,13 @@ public class DialogInteractable : Interactable
             CleanUpButtons();
             HideBubbles();
         }
+    }
+
+    private IEnumerator hidetextBox()
+    {
+        yield return new WaitForSeconds(timeBeforeHiding + 0.2f);
+        dialogBox.gameObject.SetActive(false);
+        StopAllCoroutines();
     }
 
     private void GenerateOptionButtons()
