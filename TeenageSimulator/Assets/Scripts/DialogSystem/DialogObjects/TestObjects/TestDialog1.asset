@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: TestDialog1
   m_EditorClassIdentifier: 
-  text: Fakka a niffo
+  text: Doet ie het al
   options:
   - {fileID: 11400000, guid: d64df906572efea4ca9be474914d6900, type: 2}
   - {fileID: 11400000, guid: 46aedf2da0082a443b9b7dc49158edfb, type: 2}
+  conversationType: 0

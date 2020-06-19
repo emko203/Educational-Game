@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Test3
   linkedDialog: {fileID: 11400000, guid: 1f6fdd2a8cd2d0a4998640a920a5ada7, type: 2}
+  changes:
+  - Stat: 1
+    ChangeAmount: 1
