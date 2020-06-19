@@ -21,6 +21,8 @@ public class DialogInteractable : Interactable
     private Canvas canvas;
     [SerializeField]
     private bool DoesSpawnBubbles = true;
+    [SerializeField]
+    private StatHandler statHandler;
 
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
@@ -121,6 +123,12 @@ public class DialogInteractable : Interactable
 
             buttonInstance.GetComponentInChildren<Text>().text = option.Text;
             buttonInstance.GetComponent<Button>().onClick.AddListener(delegate { ChangeTargetDialog(option.LinkedDialog); });
+
+            foreach (Option.StatChange statChange in option.GetStatChanges())
+            {
+                buttonInstance.GetComponent<Button>().onClick.AddListener(delegate { statHandler.ChangeStat(statChange.GetChangeAmount(), statChange.GetStat()); });
+            }
+
             itterator++;
         }
     }

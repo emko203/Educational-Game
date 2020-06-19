@@ -15,13 +15,27 @@ public class Option : ScriptableObject
 
     public Dialog LinkedDialog { get => linkedDialog; set => linkedDialog = value; }
     public string Text { get => text; set => text = value; }
+
+    public List<StatChange> GetStatChanges()
+    {
+        return changes;
+    }
     [Serializable]
-    private class StatChange
+    public class StatChange
     {
         [SerializeField]
         private EnumStats Stat;
         [SerializeField]
         private int ChangeAmount;
+
+        public EnumStats GetStat()
+        {
+            return Stat;
+        }
+        public int GetChangeAmount()
+        {
+            return ChangeAmount;
+        }
         public StatChange(EnumStats targetStat, int amount)
         {
             Stat = targetStat;
