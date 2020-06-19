@@ -19,18 +19,26 @@ public class StatHandler : MonoBehaviour
     [SerializeField]
     private Slider happinessSlider;
     [SerializeField]
+    private Gradient happinessGradient;
+    [SerializeField]
     private Slider bullyLevelSlider;
+    [SerializeField]
+    private Gradient bullyLevelGradient;
 
     private int happiness;
     private int bullyLevel;
 
-    private void Awake()
+    private void Start()
     {
+        Debug.Log("Start");
         happiness = happinessStart;
         bullyLevel = bullyLevelStart;
 
         bullyLevelSlider.maxValue = bullyLevelMax;
         happinessSlider.maxValue = happinessMax;
+
+        UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel);
+        UpdateStatGrapic(EnumStats.HAPPINESS, happiness);
     }
 
     private void UpdateStatGrapic(EnumStats statToChange, int value)
@@ -38,6 +46,8 @@ public class StatHandler : MonoBehaviour
         Slider toUpdate = GetSlider(statToChange);
 
         toUpdate.value = value;
+
+        SetSliderFill(statToChange);
     }
 
     public void UpStat(int value, EnumStats statToChange)
@@ -115,5 +125,24 @@ public class StatHandler : MonoBehaviour
             default:
                 return null;
         }
+    }
+
+    private Gradient GetGradient(EnumStats statToGet)
+    {
+        switch (statToGet)
+        {
+            case EnumStats.HAPPINESS:
+                return happinessGradient;
+            case EnumStats.BULLY_LEVEL:
+                return bullyLevelGradient;
+            default:
+                return null;
+        }
+    }
+
+    private void SetSliderFill(EnumStats targetStat)
+    {
+        Image targetImage = GetSlider(targetStat).fillRect.gameObject.GetComponent<Image>();
+        targetImage.color = GetGradient(targetStat).Evaluate(GetSlider(targetStat).value);
     }
 }
