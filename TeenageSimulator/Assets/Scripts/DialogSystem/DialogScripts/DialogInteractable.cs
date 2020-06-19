@@ -9,25 +9,18 @@ public class DialogInteractable : Interactable
 {
     [SerializeField]
     private Dialog TargetDialog;
-    [SerializeField]
     private Text TextBox;
-    [SerializeField]
     private Image TextBoxGraphic;
-    [SerializeField]
     private Transform OptionAnchor;
-    [SerializeField]
     private Button OptionButton;
-    [SerializeField]
     private Canvas canvas;
-    [SerializeField]
-    private bool DoesSpawnBubbles = true;
-    [SerializeField]
     private StatHandler statHandler;
+    private bool DoesSpawnBubbles = true;
 
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
 
-    public RectTransform dialogBox;
+    private RectTransform dialogBox;
 
     private void Awake()
     {
@@ -62,7 +55,17 @@ public class DialogInteractable : Interactable
 
     public override void HandleInteraction(Transform player)
     {
+        DialogRequirementsContainer container = player.gameObject.GetComponent<DialogRequirementsContainer>();
+        TextBox = container.TextBox;
+        TextBoxGraphic = container.TextBoxGraphic;
+        OptionAnchor = container.OptionAnchor;
+        OptionButton = container.OptionButton;
+        canvas = container.canvas;
+        statHandler = container.statHandler;
+        dialogBox = container.dialogBox;
+
         base.HandleInteraction(player);
+
         TurnTimeOutOn();   
         HandleDialog();
 
