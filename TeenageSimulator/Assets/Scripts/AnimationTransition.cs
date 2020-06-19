@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AnimationTransition : MonoBehaviour
 {
-    public void WalkingAnimation() 
-    { 
-    
+    public Animator animator;
+
+    public void WalkingAnimation(bool isWalking) 
+    {
+        animator.SetBool("isWalking", isWalking);
     }
 }
