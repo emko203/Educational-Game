@@ -12646,6 +12646,7 @@ MonoBehaviour:
   radius: 6.8
   TimeOutAfterTrigger: 0
   hoverIntensity: 1.5
+  MovesAfterInteraction: 0
   IsActiveAndInteractable: 1
   TimedOut: 0
   TargetDialog: {fileID: 11400000, guid: df6eee9c4ab238b498ffb822f64a9a0b, type: 2}
@@ -26457,6 +26458,7 @@ MonoBehaviour:
   radius: 21.2
   TimeOutAfterTrigger: 2
   hoverIntensity: 1.5
+  MovesAfterInteraction: 0
   IsActiveAndInteractable: 1
   TimedOut: 0
   TargetDialog: {fileID: 11400000, guid: 1cf890994ea46b0499da08c3747885d2, type: 2}

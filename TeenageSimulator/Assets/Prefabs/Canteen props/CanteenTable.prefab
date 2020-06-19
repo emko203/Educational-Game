@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3123877418678173476}
   - component: {fileID: 4506025271655984031}
   - component: {fileID: 3149100102641518486}
+  - component: {fileID: 5716254830758443884}
   m_Layer: 0
   m_Name: CanteenTable
   m_TagString: Untagged
@@ -95,6 +96,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.551962, y: 2.659643, z: 7.9967327}
   m_Center: {x: 0, y: 0.8868505, z: -2.5101085}
+--- !u!208 &5716254830758443884
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731953005594799604}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.276, y: 1.33, z: 3.9980001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.887, z: -2.5100002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &544114721950782699
 PrefabInstance:
   m_ObjectHideFlags: 0
