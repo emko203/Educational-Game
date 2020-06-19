@@ -490,28 +490,6 @@ public class lb_Bird : MonoBehaviour {
 		}
 	}
 
-	public void KillBirdWithForce(Vector3 force){
-		if(!dead){
-			controller.SendMessage ("FeatherEmit",transform.position);
-			anim.SetTrigger(dieTriggerHash);
-			anim.applyRootMotion = false;
-			dead = true;
-			onGround = false;
-			flying = false;
-			landing = false;
-			idle = false;
-			perched = false;
-			AbortFlyToTarget();
-			StopAllCoroutines();
-			GetComponent<Collider>().isTrigger = false;
-			birdCollider.center = new Vector3(0.0f,0.0f,0.0f);
-			birdCollider.size = new Vector3(0.1f,0.01f,0.1f)*controller.birdScale;
-			GetComponent<Rigidbody>().isKinematic = false;
-			GetComponent<Rigidbody>().useGravity = true;
-			GetComponent<Rigidbody>().AddForce (force);
-		}
-	}
-
 	void Revive(){
 		if(dead){
 			birdCollider.center = bColCenter;

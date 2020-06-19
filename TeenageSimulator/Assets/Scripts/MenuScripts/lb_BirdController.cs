@@ -129,8 +129,6 @@ public class lb_BirdController : MonoBehaviour {
 		}
 
 		//find all the targets
-		
-
 		for (int i=0;i<groundTargets.Length;i++){
 			if(Vector3.Distance (groundTargets[i].transform.position,currentCamera.transform.position)<unspawnDistance){
 				birdGroundTargets.Add(groundTargets[i]);
@@ -141,19 +139,11 @@ public class lb_BirdController : MonoBehaviour {
 				birdPerchTargets.Add(perchTargets[i]);
 			}
 		}
-
-		//instantiate 3 feather emitters for killing the birds
-		GameObject fEmitter = Resources.Load ("featherEmitter",typeof(GameObject)) as GameObject;
-		for(int i=0;i<3;i++){
-			featherEmitters[i] = Instantiate (fEmitter,Vector3.zero,Quaternion.identity) as GameObject;
-			featherEmitters[i].transform.parent = transform;
-			featherEmitters[i].SetActive (false);
-		}
 	}
 
 	void OnEnable(){
 		InvokeRepeating("UpdateBirds",1,1);
-		StartCoroutine("UpdateTargets");
+		StartCoroutine(UpdateTargets());
 	}
 
 	Vector3 FindPointInGroundTarget(GameObject target){
@@ -292,24 +282,6 @@ public class lb_BirdController : MonoBehaviour {
 		return lstSpawnpoints[index].transform.position;
 
 	}
-	Vector3 FindPositionOffCamera(){
-		RaycastHit hit;
-		float dist = Random.Range (2,10);
-		Vector3 ray = -currentCamera.transform.forward;
-		int loopCheck = 0;
-		//find a random ray pointing away from the cameras field of view
-		ray += new Vector3(Random.Range (-.5f,.5f),Random.Range (-.5f,.5f),Random.Range (-.5f,.5f));
-		//cycle through random rays until we find one that doesnt hit anything
-		while(Physics.Raycast(currentCamera.transform.position,ray,out hit,dist)){
-			dist = Random.Range (2,10);
-			loopCheck++;
-			if (loopCheck > 35){
-				//can't find any good spawn points so lets cancel
-				return Vector3.zero;
-			}
-		}
-		return currentCamera.transform.position+(ray*dist);
-	}
 	
 	void BirdFindTarget(GameObject bird){
 		//yield return new WaitForSeconds(1);
@@ -333,21 +305,5 @@ public class lb_BirdController : MonoBehaviour {
 		}else{
 			bird.SendMessage ("FlyToTarget",currentCamera.transform.position+new Vector3(Random.Range (-100,100),Random.Range (5,10),Random.Range(-100,100)));
 		}
-	}
-
-	void FeatherEmit(Vector3 pos){
-		foreach (GameObject fEmit in featherEmitters){
-			if(!fEmit.activeSelf){
-				fEmit.transform.position = pos;
-				fEmit.SetActive (true);
-				StartCoroutine("DeactivateFeathers",fEmit);
-				break;
-			}
-		}
-	}
-
-	IEnumerator DeactivateFeathers(GameObject featherEmit){
-		yield return new WaitForSeconds(4.5f);
-		featherEmit.SetActive (false);
 	}
 }
