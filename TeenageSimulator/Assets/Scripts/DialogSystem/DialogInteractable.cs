@@ -34,6 +34,7 @@ public class DialogInteractable : Interactable
         HideBubbles();
     }
 
+
     public void HandleDialog()
     {
         if (TargetDialog != null)
@@ -89,9 +90,6 @@ public class DialogInteractable : Interactable
     public override void EndInteraction()
     {
         dialogBox.DOAnchorPos(new Vector2(-650, 0), 1f);
-
-        TextBox.gameObject.SetActive(false);
-        TextBoxGraphic.gameObject.SetActive(false);
         CleanUpButtons();
         HideBubbles();
     }
@@ -138,5 +136,5 @@ public class DialogInteractable : Interactable
             Destroy(button);
         }
         ButtonInstances.RemoveRange(0, ButtonInstances.Count);
-    }
+    } 
 }
