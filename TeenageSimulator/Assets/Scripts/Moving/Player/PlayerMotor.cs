@@ -19,10 +19,14 @@ public class PlayerMotor : MonoBehaviour
 
     private void Update()
     {
-        if (agent.destination == transform.position || agent.isStopped)
+        if (agent.enabled)
         {
-            at.WalkingAnimation(false);
-        }        
+            if (agent.destination == transform.position || agent.isStopped)
+            {
+                at.WalkingAnimation(false);
+            }
+        }
+             
     }
 
     private void Start()
@@ -123,6 +127,9 @@ public class PlayerMotor : MonoBehaviour
 
     public void StopMoving()
     {
-        agent.isStopped = true;
+        if (agent.enabled)
+        {
+            agent.isStopped = true;
+        }        
     }
 }
