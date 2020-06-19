@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScenes/MouseMovement.unity
     guid: 9b96931ef2eebad4787f354fe5ce1c81
   - enabled: 1
-    path: Assets/Scenes/Menus/MainMenuEchte.unity
+    path: Assets/Scenes/Menus/MainMenu.unity
     guid: 231e7cc9738c5d0419ec7d3e2ee9275f
   m_configObjects: {}
