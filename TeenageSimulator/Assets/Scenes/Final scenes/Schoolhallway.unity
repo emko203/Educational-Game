@@ -3745,6 +3745,11 @@ PrefabInstance:
       propertyPath: DoesSpawnBubbles
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425165537013819976, guid: 2f3e27eecb190e44a9af50723c394274,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 324110185}
     - target: {fileID: 1616243674109227901, guid: 2f3e27eecb190e44a9af50723c394274,
         type: 3}
       propertyPath: cam
@@ -4462,6 +4467,11 @@ PrefabInstance:
       propertyPath: DoesSpawnBubbles
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425165537013819976, guid: 2f3e27eecb190e44a9af50723c394274,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 324110185}
     - target: {fileID: 1616243674109227901, guid: 2f3e27eecb190e44a9af50723c394274,
         type: 3}
       propertyPath: cam
@@ -10410,6 +10420,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1411865174}
+    - target: {fileID: 4599985951784693709, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808433231618977308, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -642
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808433231618977308, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5534347370561252661, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12657,6 +12682,7 @@ MonoBehaviour:
     type: 3}
   canvas: {fileID: 532700611}
   DoesSpawnBubbles: 0
+  dialogBox: {fileID: 324110185}
   MaxInteractions: 100
 --- !u!135 &614310104
 SphereCollider:
@@ -16647,6 +16673,11 @@ PrefabInstance:
       propertyPath: DoesSpawnBubbles
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425165537013819976, guid: 2f3e27eecb190e44a9af50723c394274,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 324110185}
     - target: {fileID: 1616243674109227901, guid: 2f3e27eecb190e44a9af50723c394274,
         type: 3}
       propertyPath: cam
@@ -18639,6 +18670,11 @@ PrefabInstance:
       propertyPath: DoesSpawnBubbles
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425165537013819976, guid: 2f3e27eecb190e44a9af50723c394274,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 324110185}
     - target: {fileID: 1616243674109227901, guid: 2f3e27eecb190e44a9af50723c394274,
         type: 3}
       propertyPath: cam
@@ -20090,6 +20126,11 @@ PrefabInstance:
       propertyPath: DoesSpawnBubbles
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425165537013819976, guid: 2f3e27eecb190e44a9af50723c394274,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 324110185}
     - target: {fileID: 1616243674109227901, guid: 2f3e27eecb190e44a9af50723c394274,
         type: 3}
       propertyPath: cam
@@ -26469,6 +26510,7 @@ MonoBehaviour:
     type: 3}
   canvas: {fileID: 532700611}
   DoesSpawnBubbles: 0
+  dialogBox: {fileID: 324110185}
   MaxInteractions: 1
 --- !u!135 &1206416450
 SphereCollider:
@@ -41004,6 +41046,11 @@ PrefabInstance:
       propertyPath: DoesSpawnBubbles
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425165537013819976, guid: 2f3e27eecb190e44a9af50723c394274,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 324110185}
     - target: {fileID: 1616243674109227901, guid: 2f3e27eecb190e44a9af50723c394274,
         type: 3}
       propertyPath: cam
