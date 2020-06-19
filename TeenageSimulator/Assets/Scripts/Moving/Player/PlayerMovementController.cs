@@ -61,7 +61,7 @@ public class PlayerMovementController : MonoBehaviour
                     if (distance < interactable.radius)
                     {
                         //In range so we just handle the interaction
-                        interactable.HandleInteraction();
+                        interactable.HandleInteraction(transform);
                     }
 
                     //Make sure we face the interactable or move to it if we are not in range

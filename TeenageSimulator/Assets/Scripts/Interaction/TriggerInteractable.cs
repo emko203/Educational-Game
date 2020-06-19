@@ -16,9 +16,9 @@ public class TriggerInteractable : DialogInteractable
         setRangeOfCollider();
     }
 
-    public override void HandleInteraction()
+    public override void HandleInteraction(Transform player)
     {
-        base.HandleInteraction();
+        base.HandleInteraction(player);
     }
 
     private void setRangeOfCollider()
@@ -37,7 +37,7 @@ public class TriggerInteractable : DialogInteractable
 
             if (player != null)
             {
-                HandleInteraction();
+                HandleInteraction(other.transform);
                 player.SetTarget(this);
                 player.StopMoving();
             }
