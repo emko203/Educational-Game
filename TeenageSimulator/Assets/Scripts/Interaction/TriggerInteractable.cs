@@ -25,7 +25,7 @@ public class TriggerInteractable : DialogInteractable
     {
         SphereCollider collider = GetComponent<SphereCollider>();
 
-        collider.radius = radius * transform.localScale.x;
+        collider.radius = radius / transform.localScale.x;
         collider.isTrigger = true;
     }
 
