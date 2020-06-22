@@ -10,7 +10,6 @@ public class Lightning : MonoBehaviour
     [SerializeField]
     private float flashIntensity;
 
-
     [Header("Timing")]
     [SerializeField]
     private float maxPauseTime;
@@ -18,6 +17,12 @@ public class Lightning : MonoBehaviour
     private float minPauseTime;
     [SerializeField]
     private float FlashTimeOut;
+
+    [Header("Sound")]
+    [SerializeField]
+    private List<AudioClip> lstThunderSounds = new List<AudioClip>();
+    [SerializeField]
+    private AudioSource source;
 
     private float currentPauseTime;
     private float normalIntensity;
@@ -46,6 +51,15 @@ public class Lightning : MonoBehaviour
         doLightning = false;
     }
 
+    private void PlayThunderSound()
+    {
+        if (!source.isPlaying)
+        {
+            source.clip = lstThunderSounds[Random.Range(0, lstThunderSounds.Count)];
+            source.Play();
+        }
+    }
+
     private IEnumerator LoopLighting()
     {
         while (doLightning)
@@ -53,6 +67,7 @@ public class Lightning : MonoBehaviour
             yield return new WaitForSeconds(currentPauseTime);
             currentPauseTime = SetRandomPauseTime();
             lightningLight.intensity = flashIntensity;
+            PlayThunderSound();
             yield return new WaitForSeconds(FlashTimeOut);
             lightningLight.intensity = normalIntensity;
         }
