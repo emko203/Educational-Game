@@ -9,15 +9,16 @@ public class PeterExitBus : MonoBehaviour
     private GameObject character;
     private NavMeshAgent agent;
 
-    private void Start()
+    private void Awake()
     {
+        character.SetActive(false);
         agent = GetComponent<NavMeshAgent>();
     }
     private void LateUpdate()
     {
-        if (!agent.pathPending)
+        float distance = agent.remainingDistance;
+        if (agent.destination != null && !agent.pathPending && distance != 0)
         {
-            float distance = agent.remainingDistance;
             if((distance <= 15))
             {
                 character.SetActive(true);
