@@ -6406,7 +6406,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Schoolhallway
+          m_StringArgument: SchoolOutdoor
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &300539404
@@ -9069,9 +9069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f299546ffcfa2b148af3b1da2fa20a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdControl: {fileID: 2128581679}
-  camera1: {fileID: 348138533}
-  camera2: {fileID: 407035804}
 --- !u!4 &459767837
 Transform:
   m_ObjectHideFlags: 0
@@ -9410,8 +9407,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  TimeOutAfterTrigger: 0
   hoverIntensity: 1.5
+  MovesAfterInteraction: 0
   IsActiveAndInteractable: 1
+  TimedOut: 0
 --- !u!1001 &477909218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34939,18 +34939,6 @@ Transform:
   m_Father: {fileID: 260084032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &2128581679 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: 1ca5316dd08051f42b31052d31beefed,
-    type: 3}
-  m_PrefabInstance: {fileID: 1533989758}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35acec13e92dc0846a893a2496fea9f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2128581680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1ca5316dd08051f42b31052d31beefed,
