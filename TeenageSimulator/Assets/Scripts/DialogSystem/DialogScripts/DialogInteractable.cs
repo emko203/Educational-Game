@@ -105,13 +105,11 @@ public class DialogInteractable : Interactable
 
     public override void EndInteraction()
     {
-        dialogBox.DOAnchorPos(new Vector2(-999, 0), timeBeforeHiding);
-        StartCoroutine(hidetextBox());
-        CleanUpButtons();
-        HideBubbles();
         base.EndInteraction();
         if (!TimedOut)
         {
+            dialogBox.DOAnchorPos(new Vector2(-999, 0), timeBeforeHiding);
+            StartCoroutine(hidetextBox());
             CleanUpButtons();
             HideBubbles();
         }
