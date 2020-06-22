@@ -17,7 +17,6 @@ public class Lightning : MonoBehaviour
     private float minPauseTime;
     [SerializeField]
     private float FlashTimeOut;
-
     [Header("Sound")]
     [SerializeField]
     private List<AudioClip> lstThunderSounds = new List<AudioClip>();
