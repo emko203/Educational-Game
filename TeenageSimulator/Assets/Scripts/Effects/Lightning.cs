@@ -51,7 +51,7 @@ public class Lightning : MonoBehaviour
         while (doLightning)
         {
             yield return new WaitForSeconds(currentPauseTime);
-            SetRandomPauseTime();
+            currentPauseTime = SetRandomPauseTime();
             lightningLight.intensity = flashIntensity;
             yield return new WaitForSeconds(FlashTimeOut);
             lightningLight.intensity = normalIntensity;
