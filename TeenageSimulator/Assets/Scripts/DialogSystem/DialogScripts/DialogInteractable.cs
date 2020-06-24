@@ -9,13 +9,15 @@ public class DialogInteractable : Interactable
 {
     [SerializeField]
     private Dialog TargetDialog;
+    [SerializeField]
+    private bool DoesSpawnBubbles = true;
+
     private Text TextBox;
     private Image TextBoxGraphic;
     private Transform OptionAnchor;
     private Button OptionButton;
     private Canvas canvas;
     private StatHandler statHandler;
-    public bool DoesSpawnBubbles = true;
 
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
@@ -30,6 +32,27 @@ public class DialogInteractable : Interactable
         HideBubbles();
     }
 
+
+    private void FillBubbleList(Transform player)
+    {
+        BubbleHelper helper = GetComponentInChildren<BubbleHelper>();
+
+        if (helper == null)
+            helper = GetComponent<BubbleHelper>();
+
+        if (helper == null)
+            helper = player.GetComponentInChildren<BubbleHelper>();
+
+        if (helper != null)
+        {
+            lstBubbles = helper.LstBubbles;
+        }
+        else
+        {
+            //still no helper on object :(?
+
+        }
+    }
 
     public void HandleDialog()
     {
@@ -74,29 +97,31 @@ public class DialogInteractable : Interactable
 
         if (DoesSpawnBubbles)
         {
-            SpawnBubble();
+            SpawnBubble(player);
         }
     }
 
-    private Bubble GetBubbleByType(EnumConversationType type)
+    private Bubble GetBubbleByType(EnumConversationType type, Transform player)
     {
+        if (lstBubbles.Count <= 0)
+            FillBubbleList(player);
+
         foreach (Bubble b in lstBubbles)
         {
-            if (b.ConversationType==type)
+            if (b.ConversationType == type)
             {
                 return b;
             }
         }
         return null;
     }
-
-    private void SpawnBubble()
+    private void SpawnBubble(Transform player)
     {
-        GetBubbleByType(TargetDialog.ConversationType).ShowBubble();       
+        GetBubbleByType(TargetDialog.ConversationType, player).ShowBubble();       
     }
 
-    private void HideBubbles() 
-    {
+    private void HideBubbles()
+    { 
         foreach (Bubble b in lstBubbles)
         {
             b.HideBubble();
