@@ -122,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 33420663186779e4192a9e5cb5159c68, type: 2}
+--- !u!4 &19938033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5135735794390122344, guid: 25dadab367599d649be3d41aacfce69a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1239425950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &33991344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3436,7 +3442,7 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TimedOut: 0
   TargetDialog: {fileID: 11400000, guid: ad2a9ef4b0977d14c8f203f6dc31bef2, type: 2}
-  DoesSpawnBubbles: 0
+  DoesSpawnBubbles: 1
   MaxInteractions: 1
 --- !u!135 &440172821
 SphereCollider:
@@ -8652,6 +8658,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1808703981766677385, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 19938033}
     - target: {fileID: 2475758382089039927, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
       propertyPath: cam
@@ -9795,7 +9806,7 @@ MonoBehaviour:
   IsActiveAndInteractable: 1
   TimedOut: 0
   TargetDialog: {fileID: 11400000, guid: 05ca4b5721d6622408f7f240381053c4, type: 2}
-  DoesSpawnBubbles: 0
+  DoesSpawnBubbles: 1
   MaxInteractions: 1
 --- !u!135 &1639495500
 SphereCollider:
