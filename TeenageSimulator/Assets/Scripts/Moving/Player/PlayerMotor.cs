@@ -43,7 +43,6 @@ public class PlayerMotor : MonoBehaviour
 
     public void MoveToDestination(Vector3 destination)
     {
-       
             EndInterAction();
 
         if (agent.enabled)

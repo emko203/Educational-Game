@@ -7,8 +7,7 @@ using DG.Tweening;
 
 public class DialogInteractable : Interactable
 {
-    [SerializeField]
-    private Dialog TargetDialog;
+    public Dialog TargetDialog;
     private Text TextBox;
     private Image TextBoxGraphic;
     private Transform OptionAnchor;
@@ -20,8 +19,7 @@ public class DialogInteractable : Interactable
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
 
-    private RectTransform dialogBox;
-    private float timeBeforeHiding = 1f;
+    private TextBoxBehaviour dialogBox;
 
     private void Awake()
     {
@@ -39,7 +37,7 @@ public class DialogInteractable : Interactable
 
             TextBox.text = TargetDialog.Text;
 
-            dialogBox.DOAnchorPos(Vector2.zero, 1f);
+            dialogBox.RequestDialogBoxMove(TextBoxBehaviour.TextBoxState.Extended);
 
             if (TargetDialog.Options.Count > 0)
             {
@@ -50,10 +48,10 @@ public class DialogInteractable : Interactable
 
     public void TurnTimeOutOn()
     {
-        if (!TimedOut)
-        {
+        StopAllCoroutines();
+
             StartCoroutine(SetTimeOut());
-        }
+
     }
 
     public override void HandleInteraction(Transform player)
@@ -65,7 +63,7 @@ public class DialogInteractable : Interactable
         OptionButton = container.OptionButton;
         canvas = container.canvas;
         statHandler = container.statHandler;
-        dialogBox = container.dialogBox;
+        dialogBox = container.dialogBox.GetComponent<TextBoxBehaviour>();
 
         base.HandleInteraction(player);
 
@@ -105,22 +103,17 @@ public class DialogInteractable : Interactable
 
     public override void EndInteraction()
     {
-        base.EndInteraction();
+        Debug.Log(TimedOut);
         if (!TimedOut)
         {
-            dialogBox.DOAnchorPos(new Vector2(-999, 0), timeBeforeHiding);
-            StartCoroutine(hidetextBox());
+            dialogBox.RequestDialogBoxMove(TextBoxBehaviour.TextBoxState.Retracted);
             CleanUpButtons();
             HideBubbles();
         }
+        base.EndInteraction();
     }
 
-    private IEnumerator hidetextBox()
-    {
-        yield return new WaitForSeconds(timeBeforeHiding + 0.2f);
-        dialogBox.gameObject.SetActive(false);
-        StopAllCoroutines();
-    }
+
 
     private void GenerateOptionButtons()
     {
