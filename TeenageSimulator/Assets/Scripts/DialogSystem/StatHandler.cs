@@ -14,6 +14,8 @@ public class StatHandler : MonoBehaviour
     private int happinessMax;
     [SerializeField]
     private int bullyLevelMax;
+    [SerializeField]
+    private StatHolderObject statHolder;
 
     [Header("Sliders")]
     [SerializeField]
@@ -58,10 +60,12 @@ public class StatHandler : MonoBehaviour
             case EnumStats.HAPPINESS:
                 happiness = AddaptValue(value, happiness, happinessMax, 0, statToChange);
                 UpdateStatGrapic(EnumStats.HAPPINESS, happiness, happinessMax);
+                statHolder.Happiness = value;
                 break;
             case EnumStats.BULLY_LEVEL:
                 bullyLevel = AddaptValue(value, bullyLevel, bullyLevelMax, 0, statToChange);
                 UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel, bullyLevelMax);
+                statHolder.BullyLevel = value;
                 break;
             default:
                 break;
