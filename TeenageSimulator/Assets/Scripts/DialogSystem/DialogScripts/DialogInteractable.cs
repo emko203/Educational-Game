@@ -131,14 +131,13 @@ public class DialogInteractable : Interactable
 
     public override void EndInteraction()
     {
-        Debug.Log(TimedOut);
-        if (!TimedOut && dialogBox != null)
-        {
-            dialogBox.RequestDialogBoxMove(TextBoxBehaviour.TextBoxState.Retracted);
-            CleanUpButtons();
-            HideBubbles();
-        }
-        base.EndInteraction();
+            if (!TimedOut && dialogBox != null && isInteracting)
+            {
+                dialogBox.RequestDialogBoxMove(TextBoxBehaviour.TextBoxState.Retracted);
+                CleanUpButtons();
+                HideBubbles();
+                base.EndInteraction();
+            }
     }
 
 

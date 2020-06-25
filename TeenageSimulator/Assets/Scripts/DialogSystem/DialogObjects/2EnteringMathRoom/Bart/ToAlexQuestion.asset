@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
-  m_Name: MaxSolvesQuestion
+  m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
+  m_Name: ToAlexQuestion
   m_EditorClassIdentifier: 
-  text: Ik zie Max het juiste antwoord uitwerken op het bord.
-  options: []
-  conversationType: 0
+  text: ...
+  linkedDialog: {fileID: 11400000, guid: 4ff63beb9110b834993715765ca26acd, type: 2}
+  changes: []

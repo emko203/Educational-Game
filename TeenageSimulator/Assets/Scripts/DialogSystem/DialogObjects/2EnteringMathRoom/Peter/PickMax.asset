@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PickMax
   m_EditorClassIdentifier: 
   text: Dan kies ik voor Max
-  options: []
+  options:
+  - {fileID: 11400000, guid: a44d251914977904593e5494e0553826, type: 2}
   conversationType: 1

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
   m_Name: PickMaxNext
   m_EditorClassIdentifier: 
-  text: Volgende
-  linkedDialog: {fileID: 0}
+  text: Kies Max
+  linkedDialog: {fileID: 11400000, guid: ae737561ab7ff734985ed856d370bc6f, type: 2}
   changes: []
