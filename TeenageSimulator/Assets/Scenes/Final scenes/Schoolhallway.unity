@@ -11552,6 +11552,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -15.400024
       objectReference: {fileID: 0}
+    - target: {fileID: 3925411213570728632, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: statHolder
+      value: 
+      objectReference: {fileID: 11400000, guid: b254f584a7daee94a90acba125c849ef,
+        type: 2}
     - target: {fileID: 3930164827412755276, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
       propertyPath: m_Radius
