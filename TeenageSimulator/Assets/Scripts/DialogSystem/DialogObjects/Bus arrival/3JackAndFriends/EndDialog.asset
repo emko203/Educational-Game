@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
   m_Name: EndDialog
   m_EditorClassIdentifier: 
-  text: Volgende
+  text: ...
   linkedDialog: {fileID: 0}
   changes: []

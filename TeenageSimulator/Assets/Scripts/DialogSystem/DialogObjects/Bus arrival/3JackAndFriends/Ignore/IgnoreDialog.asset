@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: IgnoreDialog
   m_EditorClassIdentifier: 
   text: 'Peter denkt: Laat ik maar niks zeggen misschien laten ze me dan met rust.'
-  options:
-  - {fileID: 11400000, guid: ddc1c336006c8d54e8a9999e21295576, type: 2}
+  options: []
   conversationType: 0
