@@ -55,32 +55,32 @@ public class TextChanging : MonoBehaviour
         }
         else 
         {
-            textToChange.text = "Could not calculate overall Happiness";
+            textToChange.text = "De vrolijkheid en het pestlevel van Peter konden niet berekend worden.";
         }
     }
 
     private void MaxHMaxB() 
     {
-        textToChange.text = "Based on the choices made, Peter ended up being very happy";
+        textToChange.text = "Jouw keuzes hebben Peter zeer blij gemaakt, maar Peter wordt nu wel meer gepest.";
     }
 
     private void MinHMinB()
     {
-        textToChange.text = "Based on the choices made, Peter ended up being very happy";
+        textToChange.text = "Jouw keuzes hebben Peter niet heel blij gemaakt, maar Peter wordt nu wel minder gepest.";
     }
     private void MaxHMinB() 
     {
 
-        textToChange.text = "Based on the choices made, Peter ended up being very happy";      
+        textToChange.text = "Jouw keuzes hebben Peter zeer blij gemaakt en Peter wordt nu ook minder gepest.";      
     }
 
     private void MedHMedB() 
     {
-        textToChange.text = "Based on the choices made, Peter ended up having decent relationships with his class mates";
+        textToChange.text = "Jouw keuzes hebben Peter redelijk blij gemaakt. Hij wordt wel nog evenveel gepest als eerst.";
     }
 
     private void MinHMaxB() 
     {
-        textToChange.text = "Based on the choices made, Peter ended up being bullied by his classmates";
+        textToChange.text = "Jouw keuzes hebben Peter niet heel blij gemaakt. Ook wordt Peter nu meer gepest.";
     }
 }
