@@ -17,6 +17,7 @@ public class DialogInteractable : Interactable
     private Button OptionButton;
     private Canvas canvas;
     private StatHandler statHandler;
+    private TalkingSoundManager talkingSoundManager;
 
     private List<Bubble> lstBubbles = new List<Bubble>();
     private List<GameObject> ButtonInstances = new List<GameObject>();
@@ -56,6 +57,8 @@ public class DialogInteractable : Interactable
     {
         if (TargetDialog != null)
         {
+            PlayRandomTalkingClip();
+
             dialogBox.gameObject.SetActive(true);
 
             TextBox.text = TargetDialog.Text;
@@ -74,6 +77,11 @@ public class DialogInteractable : Interactable
         }
     }
 
+    private void PlayRandomTalkingClip()
+    {
+        talkingSoundManager.PlayRandomClip();
+    }
+
     public void TurnTimeOutOn()
     {
         StopAllCoroutines();
@@ -85,6 +93,7 @@ public class DialogInteractable : Interactable
     public override void HandleInteraction(Transform player)
     {
         DialogRequirementsContainer container = player.gameObject.GetComponent<DialogRequirementsContainer>();
+        talkingSoundManager = container.talkingSoundManager;
         TextBox = container.TextBox;
         TextBoxGraphic = container.TextBoxGraphic;
         OptionAnchor = container.OptionAnchor;
