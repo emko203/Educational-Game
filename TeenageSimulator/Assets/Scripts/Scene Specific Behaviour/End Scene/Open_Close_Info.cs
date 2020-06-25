@@ -5,9 +5,6 @@ using UnityEngine;
 public class Open_Close_Info : MonoBehaviour
 {
     public GameObject Panel;
-    public GameObject TitleH;
-    private bool panelOpen = false;
-
     public void OpenPanel() 
     {
         if (Panel != null)
@@ -17,15 +14,4 @@ public class Open_Close_Info : MonoBehaviour
         }
     }
 
-    public void ShowHappiness() 
-    {
-        OpenPanel();
-        TitleH.SetActive(true);
-    }
-
-    public void ShowBully() 
-    {
-        OpenPanel();
-        TitleH.SetActive(false);
-    }
 }
