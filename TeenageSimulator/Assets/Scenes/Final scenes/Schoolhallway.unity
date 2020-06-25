@@ -11570,7 +11570,7 @@ PrefabInstance:
     - target: {fileID: 4599985951784693709, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5534347370561252661, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
@@ -20744,7 +20744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 46.2
-  TimeOutAfterTrigger: 4
+  TimeOutAfterTrigger: 1
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
   InteractionEnd:
@@ -26186,7 +26186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 46.2
-  TimeOutAfterTrigger: 4
+  TimeOutAfterTrigger: 1
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
   InteractionEnd:
@@ -30459,7 +30459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 25
-  TimeOutAfterTrigger: 4
+  TimeOutAfterTrigger: 1
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
   InteractionEnd:
@@ -30619,7 +30619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 21.2
-  TimeOutAfterTrigger: 2
+  TimeOutAfterTrigger: 1
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
   InteractionEnd:
@@ -30868,7 +30868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 46.2
-  TimeOutAfterTrigger: 4
+  TimeOutAfterTrigger: 1
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
   InteractionEnd:
@@ -51790,7 +51790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 46.2
-  TimeOutAfterTrigger: 4
+  TimeOutAfterTrigger: 1
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
   InteractionEnd:

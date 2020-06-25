@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
   m_Name: Question1
   m_EditorClassIdentifier: 
-  text: Oke dan, vraag 1. Peter wil jij deze uitwerken op het bord?
+  text: Oke dan, vraag 1. Peter weet jij toevallig het antwoord?
   options:
   - {fileID: 11400000, guid: e231e414a7961f442b6ff3737c3a29ed, type: 2}
   conversationType: 1

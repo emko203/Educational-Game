@@ -15,4 +15,4 @@ MonoBehaviour:
   text: 'Peter: Nou dat is gewoon de regen die mijn kleding nat heeft gemaakt hoor.'
   options:
   - {fileID: 11400000, guid: 4f6a6900276abbe42a0ec26de1f442b7, type: 2}
-  conversationType: 0
+  conversationType: 1

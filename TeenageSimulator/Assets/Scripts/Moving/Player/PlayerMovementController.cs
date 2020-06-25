@@ -34,6 +34,11 @@ public class PlayerMovementController : MonoBehaviour
             mousePos = Input.mousePosition;           
             MoveCharacter(mousePos);
         }
+
+        if (!motor.HasOptions && Input.GetKeyDown(KeyCode.Space))
+        {
+            motor.EndInterAction();
+        }
     }
 
     private void MoveCharacter(Vector2 mousePosition)

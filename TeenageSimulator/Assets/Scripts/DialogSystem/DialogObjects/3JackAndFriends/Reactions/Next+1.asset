@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
   m_Name: Next+1
   m_EditorClassIdentifier: 
-  text: Volgende
+  text: ...
   linkedDialog: {fileID: 11400000, guid: bf8c2653d3cd424499187283ca94f521, type: 2}
-  changes:
-  - Stat: 1
-    ChangeAmount: 1
+  changes: []
