@@ -15,20 +15,26 @@ public class WalkingSoundManager : MonoBehaviour
 
     public static void PlayWalkingSound()
     {
-        if (SceneManager.GetActiveScene().name != "SchoolOutdoor")
+        if (source != null)
         {
-            if (!source.isPlaying)
+            if (SceneManager.GetActiveScene().name != "SchoolOutdoor")
             {
-                source.Play();
+                if (!source.isPlaying)
+                {
+                    source.Play();
+                }
             }
         }
     }
 
     public static void StopWalkingSound()
     {
-        if (source.isPlaying)
+        if (source != null)
         {
-            source.Stop();
+            if (source.isPlaying)
+            {
+                source.Stop();
+            }
         }
     }
 }
