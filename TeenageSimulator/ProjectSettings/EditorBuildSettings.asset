@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final scenes/Bus.unity
     guid: 12b173bb052b6ad47887919e6a4d8ea5
+  - enabled: 1
+    path: Assets/Scenes/End scene/End Review.unity
+    guid: acaf5d86485f8394d9eb6d50bcb808ba
   m_configObjects: {}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: React
   m_EditorClassIdentifier: 
   text: Reageren
-  linkedDialog: {fileID: 11400000, guid: bf8c2653d3cd424499187283ca94f521, type: 2}
+  linkedDialog: {fileID: 11400000, guid: 9f5b71261a513b047a69e238736b2227, type: 2}
   changes:
   - Stat: 1
     ChangeAmount: 1
