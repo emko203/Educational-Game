@@ -44,13 +44,11 @@ public class PlayerMovementController : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(mousePosition);
             RaycastHit hit;
 
-            Debug.DrawRay(ray.GetPoint(0), ray.direction);
-
             if (Physics.Raycast(ray, out hit, 300, MovementMask))
             {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-                if (interactable != null)
+                if (interactable != null && interactable.GetType() != typeof(TriggerInteractable))
                 {
                     //Clicked on interactable so we spawn particle
                     motor.SpawnInteractableParticle(interactable.transform.position);

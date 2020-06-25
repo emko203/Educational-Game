@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
+  m_Name: HomeWorkDone
+  m_EditorClassIdentifier: 
+  text: Oke jongens, we gaan het huiswerk van de vorige keer nakijken. Graag wil
+    ik het nu weten als het iemand niet gelukt is om het af te krijgen. Kom ik hier
+    later achter dan heb je een probleem.
+  options: []
+  conversationType: 1

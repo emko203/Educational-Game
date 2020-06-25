@@ -25,8 +25,8 @@ public class StatHandler : MonoBehaviour
     [SerializeField]
     private Gradient bullyLevelGradient;
 
-    private int happiness;
-    private int bullyLevel;
+    private float happiness;
+    private float bullyLevel;
 
     private void Start()
     {
@@ -40,7 +40,7 @@ public class StatHandler : MonoBehaviour
         UpdateStatGrapic(EnumStats.HAPPINESS, happiness, happinessMax);
     }
 
-    private void UpdateStatGrapic(EnumStats statToChange, int value, int maxValue)
+    private void UpdateStatGrapic(EnumStats statToChange, float value, int maxValue)
     {
         Slider toUpdate = GetSlider(statToChange);
 
@@ -51,7 +51,7 @@ public class StatHandler : MonoBehaviour
         SetSliderFill(statToChange, mappedValue);
     }
 
-    public void ChangeStat(int value, EnumStats statToChange)
+    public void ChangeStat(float value, EnumStats statToChange)
     {
         switch (statToChange)
         {
@@ -68,7 +68,7 @@ public class StatHandler : MonoBehaviour
         }
     }
 
-    private int AddaptValue(int value, int ChangedValue, int MaxValue, int MinValue, EnumStats statToChange)
+    private float AddaptValue(float value, float ChangedValue, int MaxValue, int MinValue, EnumStats statToChange)
     {
         ChangedValue += value;
         if(ChangedValue > MaxValue)

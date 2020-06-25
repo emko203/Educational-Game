@@ -23,10 +23,10 @@ public class TriggerInteractable : DialogInteractable
 
     private void setRangeOfCollider()
     {
-        //SphereCollider collider = GetComponent<SphereCollider>();
+        SphereCollider collider = GetComponent<SphereCollider>();
 
-        //collider.radius = radius;
-        //collider.isTrigger = true;
+        collider.radius = radius / transform.localScale.x;
+        collider.isTrigger = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,7 +51,7 @@ public class TriggerInteractable : DialogInteractable
         currentInteractions++;
         if (currentInteractions >= MaxInteractions)
         {
-            DeactivateInteractable();
+            DeactivateInteractable(GetComponent<SphereCollider>());
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Interactable : MonoBehaviour
 
     [SerializeField]
     private bool MovesAfterInteraction;
+
+    public UnityEvent InteractionEnd;
 
     [HideInInspector]public bool IsActiveAndInteractable = true;
     [HideInInspector]public bool TimedOut = false;
@@ -37,9 +40,25 @@ public class Interactable : MonoBehaviour
         IsActiveAndInteractable = true;
     }
 
-    public virtual void DeactivateInteractable()
+    public virtual void DeactivateInteractable(SphereCollider collider)
     {
         IsActiveAndInteractable = false;
+
+        SchrinkColliderRadius(collider);
+    }
+
+    private void SchrinkColliderRadius(SphereCollider collider)
+    {
+        float newRadius = 1;
+
+        CapsuleCollider col = GetComponent<CapsuleCollider>();
+
+        if (col != null)
+        {
+            newRadius = col.radius;
+        }
+
+        collider.radius = newRadius;
     }
 
     public virtual void EndInteraction()
@@ -48,6 +67,7 @@ public class Interactable : MonoBehaviour
         {
             agent.isStopped = false;
         }
+        InteractionEnd.Invoke();
     }
 
     public IEnumerator SetTimeOut()
