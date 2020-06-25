@@ -4,11 +4,9 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField]
-    private Transform _nextPosition;
+    private Transform _nextPosition;    
     [SerializeField]
-    private float speed = 12;
-    [SerializeField]
-    private float despawnDistance = -20;
+    private float despawnDistance = -60;
 
     public void Awake()
     {
@@ -16,24 +14,17 @@ public class Tile : MonoBehaviour
     }
     public Transform GetSpawnPosition() 
     {
+        
         return _nextPosition;
-    }
-
-    private void Update()
-    {
-        MoveSelf();
-    }
-
-    private void MoveSelf()
-    {
-        transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
 
     private IEnumerator WaitForDestroy()
     {
+        
         while (transform.position.x >= despawnDistance)
         {
             yield return null;
+            
         }
         Destroy(gameObject);
     }
