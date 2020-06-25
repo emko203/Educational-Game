@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Alex, ik had gevraagd het te melden als je je huiswerk niet af had. Nu wil
     ik je graag spreken na de les.
-  options: []
+  options:
+  - {fileID: 11400000, guid: 0ce656d395ab1934e96a3c8113be9a39, type: 2}
   conversationType: 1

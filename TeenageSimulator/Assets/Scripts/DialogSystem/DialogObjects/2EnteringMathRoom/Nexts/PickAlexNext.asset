@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
   m_Name: PickAlexNext
   m_EditorClassIdentifier: 
-  text: Volgende
-  linkedDialog: {fileID: 0}
+  text: Kies Alex
+  linkedDialog: {fileID: 11400000, guid: c984fd059517bcd40b7042db11b9a326, type: 2}
   changes:
-  - Stat: 0
-    ChangeAmount: 0
+  - Stat: 1
+    ChangeAmount: 1

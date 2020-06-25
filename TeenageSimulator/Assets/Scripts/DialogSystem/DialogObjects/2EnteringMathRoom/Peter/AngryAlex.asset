@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: AngryAlex
   m_EditorClassIdentifier: 
   text: Ik zie dat Alex mij met een boze blik aankijkt terwijl ze naar het bord loopt.
-  options: []
+  options:
+  - {fileID: 11400000, guid: ea4ecd2688013ec409e0a26b4782fe99, type: 2}
   conversationType: 0

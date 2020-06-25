@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PickAlex
   m_EditorClassIdentifier: 
   text: Dan kies ik voor Alex
-  options: []
+  options:
+  - {fileID: 11400000, guid: e02b9270b4ef35e4087c46ef69c9eb00, type: 2}
   conversationType: 1
