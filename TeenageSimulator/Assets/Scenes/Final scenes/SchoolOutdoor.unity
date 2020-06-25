@@ -1268,6 +1268,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a332e7fc7e835946bfaedf30c576a26, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!1001 &198199411
@@ -1687,6 +1692,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a332e7fc7e835946bfaedf30c576a26, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!1 &231188701
@@ -1859,6 +1869,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a332e7fc7e835946bfaedf30c576a26, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!1 &260084031
@@ -3486,6 +3501,9 @@ MonoBehaviour:
   TimeOutAfterTrigger: 2
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
+  InteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
   IsActiveAndInteractable: 1
   TimedOut: 0
   TargetDialog: {fileID: 11400000, guid: ad2a9ef4b0977d14c8f203f6dc31bef2, type: 2}
@@ -3956,6 +3974,9 @@ MonoBehaviour:
   TimeOutAfterTrigger: 0
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
+  InteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
   IsActiveAndInteractable: 1
   TimedOut: 0
 --- !u!1001 &489509625
@@ -6638,6 +6659,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a332e7fc7e835946bfaedf30c576a26, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!1001 &1078943052
@@ -7783,6 +7809,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a332e7fc7e835946bfaedf30c576a26, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!1 &1192642526
@@ -8139,6 +8170,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10925d28a1a7b354786f1a70ce556aec, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!1001 &1239335422
@@ -8742,6 +8778,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3925411213570728632, guid: 809a128a202970b4eaa1bb474ca4875d,
+        type: 3}
+      propertyPath: statHolder
+      value: 
+      objectReference: {fileID: 11400000, guid: b254f584a7daee94a90acba125c849ef,
+        type: 2}
     - target: {fileID: 4335126817935037379, guid: 809a128a202970b4eaa1bb474ca4875d,
         type: 3}
       propertyPath: m_Camera
@@ -9012,6 +9054,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10925d28a1a7b354786f1a70ce556aec, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!1 &1422509171
@@ -9540,6 +9587,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10925d28a1a7b354786f1a70ce556aec, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!1 &1565833288
@@ -9862,6 +9914,9 @@ MonoBehaviour:
   TimeOutAfterTrigger: 2
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
+  InteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
   IsActiveAndInteractable: 1
   TimedOut: 0
   TargetDialog: {fileID: 11400000, guid: 05ca4b5721d6622408f7f240381053c4, type: 2}
@@ -10799,6 +10854,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10925d28a1a7b354786f1a70ce556aec, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!4 &1787911895 stripped
@@ -11309,6 +11369,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300173373817643399, guid: 05c775653789a8d46b9e560a21ac187c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10925d28a1a7b354786f1a70ce556aec, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c775653789a8d46b9e560a21ac187c, type: 3}
 --- !u!20 &1866326847 stripped
@@ -12522,6 +12587,7 @@ MonoBehaviour:
   - waitTime: 0
     location: {fileID: 996862506}
   loopPath: 0
+  animator: {fileID: 0}
 --- !u!195 &2119813072
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -47,6 +47,7 @@ public class StatHandler : MonoBehaviour
         Slider toUpdate = GetSlider(statToChange);
 
         toUpdate.value = value;
+        toUpdate.GraphicUpdateComplete();
 
         float mappedValue = value;
 
@@ -60,12 +61,12 @@ public class StatHandler : MonoBehaviour
             case EnumStats.HAPPINESS:
                 happiness = AddaptValue(value, happiness, happinessMax, 0, statToChange);
                 UpdateStatGrapic(EnumStats.HAPPINESS, happiness, happinessMax);
-                statHolder.Happiness = value;
+                statHolder.Happiness += value;
                 break;
             case EnumStats.BULLY_LEVEL:
                 bullyLevel = AddaptValue(value, bullyLevel, bullyLevelMax, 0, statToChange);
                 UpdateStatGrapic(EnumStats.BULLY_LEVEL, bullyLevel, bullyLevelMax);
-                statHolder.BullyLevel = value;
+                statHolder.BullyLevel += value;
                 break;
             default:
                 break;
@@ -113,9 +114,9 @@ public class StatHandler : MonoBehaviour
     }
 
     private void SetSliderFill(EnumStats targetStat, float value)
-    {
+        {
         Slider targetSlider = GetSlider(targetStat);
         Image targetImage = targetSlider.fillRect.gameObject.GetComponent<Image>();
-        targetImage.color = GetGradient(targetStat).Evaluate(value);
+        targetImage.color = GetGradient(targetStat).Evaluate(1f);
     }
 }

@@ -20,11 +20,17 @@ public class HappynessOutsideTimer : MonoBehaviour
     {
         StartCoroutine(GettingWetTimer());
     }
-    
+
+    private void Update()
+    {
+        
+    }
+
     private void GetWet()
     {
         statHandler.ChangeStat(WetValue, EnumStats.HAPPINESS);
     }
+    
 
     IEnumerator GettingWetTimer()
     {
@@ -34,6 +40,7 @@ public class HappynessOutsideTimer : MonoBehaviour
         {
             yield return new WaitForSeconds(interval);
             GetWet();
+            Debug.Log(currentWetValue);
             currentWetValue++;
         }
     }
