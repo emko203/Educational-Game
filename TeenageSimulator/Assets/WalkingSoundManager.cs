@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class WalkingSoundManager : MonoBehaviour
@@ -14,9 +15,12 @@ public class WalkingSoundManager : MonoBehaviour
 
     public static void PlayWalkingSound()
     {
-        if (!source.isPlaying)
+        if (SceneManager.GetActiveScene().name != "SchoolOutdoor")
         {
-            source.Play();
+            if (!source.isPlaying)
+            {
+                source.Play();
+            }
         }
     }
 

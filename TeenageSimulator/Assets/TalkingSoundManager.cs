@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TalkingSoundManager : MonoBehaviour
 {
@@ -12,11 +13,14 @@ public class TalkingSoundManager : MonoBehaviour
 
     public void PlayRandomClip()
     {
-        //if source is not playing a sound currently we load in a sound
-        if (!source.isPlaying)
+        if (SceneManager.GetActiveScene().name != "SchoolOutdoor")
         {
-            source.clip = lstTalkingSounds[Random.Range(0, lstTalkingSounds.Count)];
-            source.Play();
+            //if source is not playing a sound currently we load in a sound
+            if (!source.isPlaying)
+            {
+                source.clip = lstTalkingSounds[Random.Range(0, lstTalkingSounds.Count)];
+                source.Play();
+            }
         }
     }
 }

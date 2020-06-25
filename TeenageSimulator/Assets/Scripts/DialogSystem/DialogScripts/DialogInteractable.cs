@@ -79,7 +79,10 @@ public class DialogInteractable : Interactable
 
     private void PlayRandomTalkingClip()
     {
-        talkingSoundManager.PlayRandomClip();
+        if (talkingSoundManager != null)
+        {
+            talkingSoundManager.PlayRandomClip();
+        }
     }
 
     public void TurnTimeOutOn()
