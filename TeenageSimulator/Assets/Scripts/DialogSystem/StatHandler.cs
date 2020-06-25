@@ -117,6 +117,6 @@ public class StatHandler : MonoBehaviour
         {
         Slider targetSlider = GetSlider(targetStat);
         Image targetImage = targetSlider.fillRect.gameObject.GetComponent<Image>();
-        targetImage.color = GetGradient(targetStat).Evaluate(1f);
+        targetImage.color = GetGradient(targetStat).Evaluate(value);
     }
 }
