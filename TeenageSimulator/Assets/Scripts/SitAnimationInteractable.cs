@@ -28,7 +28,7 @@ public class SitAnimationInteractable : AnimationInteractable
         this.player.GetComponent<CapsuleCollider>().height = 1.05f;
         this.player.GetComponent<NavMeshAgent>().enabled = false;
         player.LookAt(target);
-        
+        WalkingSoundManager.StopWalkingSound();
         animator.SetBool("isSitting", true);
         base.HandleInteraction(player);
     }

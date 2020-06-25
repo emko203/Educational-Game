@@ -31,6 +31,7 @@ public class PlayerMotor : MonoBehaviour
             if (agent.destination == transform.position || agent.isStopped)
             {
                 at.WalkingAnimation(false);
+                WalkingSoundManager.StopWalkingSound();
             }
         }
              
@@ -63,6 +64,7 @@ public class PlayerMotor : MonoBehaviour
             if (agent.enabled)
             {
                 at.WalkingAnimation(true);
+                WalkingSoundManager.PlayWalkingSound();
 
                 ClearCurrentTarget();
                 StopMoving();
