@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
-  m_Name: AlexChoice
+  m_Name: MaxSolves
   m_EditorClassIdentifier: 
-  text: ...
-  linkedDialog: {fileID: 11400000, guid: 6bae45a2a73a3b949a076457a9fe2b6f, type: 2}
+  text: Ik zie Max het juiste antwoor
+  linkedDialog: {fileID: 11400000, guid: 079a4baabc766ce4191718908c48b0c2, type: 2}
   changes: []

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: PickNextPerson
   m_EditorClassIdentifier: 
   text: Oke Peter, kies maar iemand uit voor vraag twee.
-  options: []
+  options:
+  - {fileID: 11400000, guid: f520f6a8b4d750a41a7b4f7a87155e17, type: 2}
+  - {fileID: 11400000, guid: 8aa8eab5f8c933d4db6c5391fd0dc85e, type: 2}
   conversationType: 1

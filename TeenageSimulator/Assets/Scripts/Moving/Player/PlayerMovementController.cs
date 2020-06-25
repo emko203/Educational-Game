@@ -69,6 +69,7 @@ public class PlayerMovementController : MonoBehaviour
                 else
                 {
                     //Just move to point on ground
+                    Debug.Log("MoveToPoint");
                     motor.MoveToDestination(hit.point);
                 }
             }
