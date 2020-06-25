@@ -71,18 +71,34 @@ public class NPCMovementController : MonoBehaviour
         {
             while (!AtDestination())
             {
-                animator.SetBool("isWalking", true);
-                animator.SetBool("isIdle", false);
+                SetWalking();
                 yield return null;
             }
             yield return new WaitForSeconds(waypoint.GetWaitTime());
             agent.SetDestination(waypoint.GetLocation().position);
-            animator.SetBool("isWalking", false);
-                animator.SetBool("isIdle", true);
+            SetIdle();
         }
         if (loopPath)
         {
             StartCoroutine(NpcPathHandler());
+        }
+    }
+
+    private void SetIdle()
+    {
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isIdle", true);
+        }
+    }
+
+    private void SetWalking()
+    {
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isIdle", false);
         }
     }
 }
