@@ -31,10 +31,13 @@ public class TextBoxBehaviour : MonoBehaviour
         }
     }
 
-    IEnumerator HideTextBox(float duration)
+    private IEnumerator HideTextBox(float duration)
     {
         yield return new WaitForSeconds(duration);
-        gameObject.SetActive(false);
+        if (boxState == TextBoxState.Retracted)
+        {
+            gameObject.SetActive(false);
+        }
         StopAllCoroutines();
     }
 
