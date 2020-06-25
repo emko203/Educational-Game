@@ -508,6 +508,7 @@ Transform:
   m_Children:
   - {fileID: 431344053}
   - {fileID: 896705985}
+  - {fileID: 1215588300}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3498,7 +3499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
-  TimeOutAfterTrigger: 2
+  TimeOutAfterTrigger: 1
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
   InteractionEnd:
@@ -6311,6 +6312,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1004630787}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1023018695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 67034021}
+    m_Modifications:
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895939, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_Name
+      value: Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895942, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107666657406895942, guid: 648d40b86b4fbd84cbb9153f3612b545,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 648d40b86b4fbd84cbb9153f3612b545, type: 3}
 --- !u!1001 &1030306970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7909,6 +7989,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192642526}
   m_Mesh: {fileID: -2432090755550338912, guid: 85fe320ccde8e614eaddb936b16a5f8f, type: 3}
+--- !u!4 &1215588300 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8107666657406895936, guid: 648d40b86b4fbd84cbb9153f3612b545,
+    type: 3}
+  m_PrefabInstance: {fileID: 1023018695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1231665872
 GameObject:
   m_ObjectHideFlags: 0
@@ -9911,7 +9997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 7
-  TimeOutAfterTrigger: 2
+  TimeOutAfterTrigger: 1
   hoverIntensity: 1.5
   MovesAfterInteraction: 0
   InteractionEnd:
