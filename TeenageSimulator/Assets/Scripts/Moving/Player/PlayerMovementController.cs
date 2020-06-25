@@ -48,8 +48,6 @@ public class PlayerMovementController : MonoBehaviour
             {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-                
-
                 if (interactable != null && interactable.GetType() != typeof(TriggerInteractable))
                 {
                     //Clicked on interactable so we spawn particle
