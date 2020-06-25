@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: AlexNoHomework
   m_EditorClassIdentifier: 
   text: 'Alex: Ik heb mijn huiswerk niet af.'
-  options:
-  - {fileID: 11400000, guid: 3ff57508666faed4d92f5dde983aa07e, type: 2}
-  conversationType: 0
+  options: []
+  conversationType: 1

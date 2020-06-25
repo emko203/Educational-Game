@@ -34,6 +34,11 @@ public class PlayerMovementController : MonoBehaviour
             mousePos = Input.mousePosition;           
             MoveCharacter(mousePos);
         }
+
+        if (!motor.HasOptions && Input.GetKeyDown(KeyCode.Space))
+        {
+            motor.EndInterAction();
+        }
     }
 
     private void MoveCharacter(Vector2 mousePosition)
@@ -47,8 +52,6 @@ public class PlayerMovementController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 300, MovementMask))
             {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
-
-                
 
                 if (interactable != null && interactable.GetType() != typeof(TriggerInteractable))
                 {

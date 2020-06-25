@@ -24,14 +24,27 @@ public class Interactable : MonoBehaviour
     [HideInInspector]public bool IsActiveAndInteractable = true;
     [HideInInspector]public bool TimedOut = false;
     private NavMeshAgent agent;
+    private PlayerMotor playerMotor;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
+
+    private void SavePlayerMotor(Transform player)
+    {
+        playerMotor = player.GetComponent<PlayerMotor>();
+    }
+
     public virtual void HandleInteraction(Transform player)
     {
+        if (playerMotor == null)
+            SavePlayerMotor(player);
+
+        playerMotor.SetDialogShown(true);
+
         isInteracting = true;
+
         if(agent != null)
         {
             agent.isStopped = true;
@@ -66,6 +79,8 @@ public class Interactable : MonoBehaviour
 
     public virtual void EndInteraction()
     {
+        playerMotor.SetDialogShown(false);
+
         if (isInteracting)
         {
             if (agent != null && MovesAfterInteraction)

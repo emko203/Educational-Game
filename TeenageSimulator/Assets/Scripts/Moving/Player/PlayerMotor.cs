@@ -20,8 +20,9 @@ public class PlayerMotor : MonoBehaviour
 
     private Interactable currentChair = null;
 
+    private bool isDialogShown = false;
     private bool canStand = true;
-    public bool CanStand { get => canStand; set => canStand = value; }
+    private bool hasOptions = false;
 
     private void Update()
     {
@@ -42,6 +43,11 @@ public class PlayerMotor : MonoBehaviour
         particleSpawner = GetComponent<ParticleSpawner>();
     }
 
+    public void SetDialogShown(bool value)
+    {
+        isDialogShown = value;
+    }
+
     public void SetSpawnParticles(bool value)
     {
         hasSpawnedParticles = value;
@@ -49,22 +55,30 @@ public class PlayerMotor : MonoBehaviour
 
     public void MoveToDestination(Vector3 destination)
     {
-        EndInterAction();
-        CheckStandingUpFromChair();
-
-        if (agent.enabled)
+        if (!isDialogShown)
         {
-            at.WalkingAnimation(true);
+            EndInterAction();
+            CheckStandingUpFromChair();
 
-            ClearCurrentTarget();
-            StopMoving();
+            if (agent.enabled)
+            {
+                at.WalkingAnimation(true);
 
-            StopAllCoroutines();
-            agent.isStopped = false;
-            agent.SetDestination(destination);
+                ClearCurrentTarget();
+                StopMoving();
 
-            SpawnMoveParticles(destination);
+                StopAllCoroutines();
+                agent.isStopped = false;
+                agent.SetDestination(destination);
+
+                SpawnMoveParticles(destination);
+            }
         }
+    }
+
+    public void setHasOptions(bool value)
+    {
+        hasOptions = value;
     }
 
     private void CheckStandingUpFromChair()
@@ -134,7 +148,7 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
-    private void EndInterAction()
+    public void EndInterAction()
     {
         if (target != null)
         {
@@ -158,4 +172,8 @@ public class PlayerMotor : MonoBehaviour
             agent.isStopped = true;
         }        
     }
+
+    public bool CanStand { get => canStand; set => canStand = value; }
+    public bool HasOptions { private set => hasOptions = value; get => hasOptions; }
+    public Interactable CurrentChair { get => currentChair; }
 }

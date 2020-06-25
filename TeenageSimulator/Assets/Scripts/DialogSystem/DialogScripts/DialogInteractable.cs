@@ -52,7 +52,7 @@ public class DialogInteractable : Interactable
         }
     }
 
-    public void HandleDialog()
+    public void HandleDialog(PlayerMotor player)
     {
         if (TargetDialog != null)
         {
@@ -64,7 +64,12 @@ public class DialogInteractable : Interactable
 
             if (TargetDialog.Options.Count > 0)
             {
-                GenerateOptionButtons();
+                player.setHasOptions(true);
+                GenerateOptionButtons(player);
+            }
+            else
+            {
+                player.setHasOptions(false);
             }
         }
     }
@@ -91,7 +96,7 @@ public class DialogInteractable : Interactable
         base.HandleInteraction(player);
 
         TurnTimeOutOn();   
-        HandleDialog();
+        HandleDialog(player.GetComponent<PlayerMotor>());
 
         if (DoesSpawnBubbles)
         {
@@ -142,11 +147,12 @@ public class DialogInteractable : Interactable
 
 
 
-    private void GenerateOptionButtons()
+    private void GenerateOptionButtons(PlayerMotor player)
     {
         int itterator = 1;
         float availableWidth = TextBox.minWidth;
         float WidthStep = availableWidth / TargetDialog.Options.Count;
+
         foreach (Option option in TargetDialog.Options)
         {
             GameObject buttonInstance = InstantiateOptionButton(itterator);
@@ -154,7 +160,7 @@ public class DialogInteractable : Interactable
             ButtonInstances.Add(buttonInstance);
 
             buttonInstance.GetComponentInChildren<Text>().text = option.Text;
-            buttonInstance.GetComponent<Button>().onClick.AddListener(delegate { ChangeTargetDialog(option.LinkedDialog); });
+            buttonInstance.GetComponent<Button>().onClick.AddListener(delegate { ChangeTargetDialog(option.LinkedDialog, player); });
 
             foreach (Option.StatChange statChange in option.GetStatChanges())
             {
@@ -175,11 +181,11 @@ public class DialogInteractable : Interactable
         return buttonInstance.gameObject;
     }
 
-    private void ChangeTargetDialog(Dialog newDialog)
+    private void ChangeTargetDialog(Dialog newDialog, PlayerMotor player)
     {
         TargetDialog = newDialog;
         CleanUpButtons();
-        HandleDialog();
+        HandleDialog(player);
     }
 
     private void CleanUpButtons()

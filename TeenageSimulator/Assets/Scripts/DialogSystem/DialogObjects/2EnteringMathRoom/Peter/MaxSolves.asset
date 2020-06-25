@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
   m_Name: MaxSolves
   m_EditorClassIdentifier: 
-  text: Ik zie Max het juiste antwoor
+  text: ...
   linkedDialog: {fileID: 11400000, guid: 079a4baabc766ce4191718908c48b0c2, type: 2}
   changes: []
