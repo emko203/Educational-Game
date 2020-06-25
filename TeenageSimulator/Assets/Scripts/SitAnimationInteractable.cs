@@ -18,7 +18,7 @@ public class SitAnimationInteractable : AnimationInteractable
 
     public override void HandleInteraction(Transform player)
     {
-        player.GetComponent<PlayerMotor>().SetTarget(this);
+        player.GetComponent<PlayerMotor>().setTargetChair(this);
         beforeSitPos = player.position;
         player.transform.position = new Vector3(chairTransform.position.x, chairTransform.position.y, chairTransform.position.z);
         player.rotation = new Quaternion(0,chairTransform.rotation.y,0,0);
