@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,6 +17,8 @@ public class PlayerMotor : MonoBehaviour
     private bool hasSpawnedParticles = false;
 
     private ParticleSpawner particleSpawner;
+
+    private Interactable currentChair = null;
 
     private void Update()
     {
@@ -43,7 +46,9 @@ public class PlayerMotor : MonoBehaviour
 
     public void MoveToDestination(Vector3 destination)
     {
-            EndInterAction();
+        Debug.Log("MoveToDestination");
+        EndInterAction();
+        CheckStandingUpFromChair();
 
         if (agent.enabled)
         {
@@ -57,6 +62,15 @@ public class PlayerMotor : MonoBehaviour
             agent.SetDestination(destination);
 
             SpawnMoveParticles(destination);
+        }
+    }
+
+    private void CheckStandingUpFromChair()
+    {
+        if (currentChair != null)
+        {
+            currentChair.EndInteraction();
+            currentChair = null;
         }
     }
 
@@ -85,6 +99,11 @@ public class PlayerMotor : MonoBehaviour
             MoveToDestination(destination);
             StartCoroutine(CheckIfInRadius(interactableToMoveTo, distance));
         }
+    }
+
+    public void setTargetChair(Interactable TargetChair)
+    {
+        currentChair = TargetChair;
     }
 
     public void SetTarget(Interactable TargetInteractable)

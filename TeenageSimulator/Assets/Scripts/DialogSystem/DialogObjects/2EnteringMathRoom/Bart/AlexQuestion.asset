@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Alex, heb je jouw huiswerk wel gedaan? Dit is namelijk niet goed, laat mij
     jouw schrift eens bekijken.
-  options: []
+  options:
+  - {fileID: 0}
   conversationType: 1

@@ -19,6 +19,8 @@ public class Interactable : MonoBehaviour
 
     public UnityEvent InteractionEnd;
 
+    internal bool isInteracting = false;
+
     [HideInInspector]public bool IsActiveAndInteractable = true;
     [HideInInspector]public bool TimedOut = false;
     private NavMeshAgent agent;
@@ -29,6 +31,7 @@ public class Interactable : MonoBehaviour
     }
     public virtual void HandleInteraction(Transform player)
     {
+        isInteracting = true;
         if(agent != null)
         {
             agent.isStopped = true;
@@ -63,11 +66,15 @@ public class Interactable : MonoBehaviour
 
     public virtual void EndInteraction()
     {
-        if (agent != null && MovesAfterInteraction)
+        if (isInteracting)
         {
-            agent.isStopped = false;
+            if (agent != null && MovesAfterInteraction)
+            {
+                agent.isStopped = false;
+            }
+            InteractionEnd.Invoke();
+            isInteracting = false;
         }
-        InteractionEnd.Invoke();
     }
 
     public IEnumerator SetTimeOut()

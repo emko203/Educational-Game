@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Ik zie dat Bart het schrift van Alex pakt en dat hij ziet dat Alex haar huiswerk
     niet af heeft.
-  options: []
+  options:
+  - {fileID: 11400000, guid: 39b60a19c328b9c4b9675706503bd4dd, type: 2}
   conversationType: 0
