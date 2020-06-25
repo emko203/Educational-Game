@@ -20,6 +20,9 @@ public class PlayerMotor : MonoBehaviour
 
     private Interactable currentChair = null;
 
+    private bool canStand = true;
+    public bool CanStand { get => canStand; set => canStand = value; }
+
     private void Update()
     {
         if (agent.enabled)
@@ -46,7 +49,6 @@ public class PlayerMotor : MonoBehaviour
 
     public void MoveToDestination(Vector3 destination)
     {
-        Debug.Log("MoveToDestination");
         EndInterAction();
         CheckStandingUpFromChair();
 
@@ -67,7 +69,7 @@ public class PlayerMotor : MonoBehaviour
 
     private void CheckStandingUpFromChair()
     {
-        if (currentChair != null)
+        if (currentChair != null && CanStand)
         {
             currentChair.EndInteraction();
             currentChair = null;

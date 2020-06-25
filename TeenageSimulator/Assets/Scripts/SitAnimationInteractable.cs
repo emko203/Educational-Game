@@ -11,6 +11,7 @@ public class SitAnimationInteractable : AnimationInteractable
     private Transform chairTransform;
     private float colHeight;
     private Vector3 beforeSitPos;
+
     private void Start()
     {
         chairTransform = GetComponent<Transform>();
@@ -43,8 +44,5 @@ public class SitAnimationInteractable : AnimationInteractable
             this.player.GetComponent<NavMeshAgent>().enabled = true;
             base.EndInteraction();
         }
-        
     }
-
-
 }
