@@ -12,4 +12,5 @@ public class DialogRequirementsContainer : MonoBehaviour
     public Canvas canvas;
     public StatHandler statHandler;
     public RectTransform dialogBox;
+    public TalkingSoundManager talkingSoundManager;
 }
