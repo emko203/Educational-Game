@@ -7,8 +7,7 @@ using DG.Tweening;
 
 public class DialogInteractable : Interactable
 {
-    [SerializeField]
-    private Dialog TargetDialog;
+    public Dialog TargetDialog;
     [SerializeField]
     private bool DoesSpawnBubbles = true;
 
