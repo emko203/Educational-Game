@@ -16,4 +16,4 @@ MonoBehaviour:
   options:
   - {fileID: 11400000, guid: 4a6d07d8c499209499e1e21792a5b035, type: 2}
   - {fileID: 11400000, guid: d9f2070ecd856404587ec050e6515549, type: 2}
-  conversationType: 0
+  conversationType: 1

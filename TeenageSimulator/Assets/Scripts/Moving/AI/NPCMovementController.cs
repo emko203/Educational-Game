@@ -11,7 +11,7 @@ public class NPCMovementController : MonoBehaviour
     private List<waypointInfo> waypoints;
     [SerializeField]
     private bool loopPath;
-
+    
     [Serializable]
     private class waypointInfo
     {
@@ -35,7 +35,10 @@ public class NPCMovementController : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private Animator animator;
     private NavMeshAgent agent;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -68,10 +71,14 @@ public class NPCMovementController : MonoBehaviour
         {
             while (!AtDestination())
             {
+                animator.SetBool("isWalking", true);
+                animator.SetBool("isIdle", false);
                 yield return null;
             }
             yield return new WaitForSeconds(waypoint.GetWaitTime());
             agent.SetDestination(waypoint.GetLocation().position);
+            animator.SetBool("isWalking", false);
+                animator.SetBool("isIdle", true);
         }
         if (loopPath)
         {

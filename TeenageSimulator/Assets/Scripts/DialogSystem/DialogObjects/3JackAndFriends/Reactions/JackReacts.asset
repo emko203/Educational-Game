@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: 'Jack: Wat maakt mij dat nou uit!'
   options: []
-  conversationType: 0
+  conversationType: 1

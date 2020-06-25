@@ -40,9 +40,25 @@ public class Interactable : MonoBehaviour
         IsActiveAndInteractable = true;
     }
 
-    public virtual void DeactivateInteractable()
+    public virtual void DeactivateInteractable(SphereCollider collider)
     {
         IsActiveAndInteractable = false;
+
+        SchrinkColliderRadius(collider);
+    }
+
+    private void SchrinkColliderRadius(SphereCollider collider)
+    {
+        float newRadius = 1;
+
+        CapsuleCollider col = GetComponent<CapsuleCollider>();
+
+        if (col != null)
+        {
+            newRadius = col.radius;
+        }
+
+        collider.radius = newRadius;
     }
 
     public virtual void EndInteraction()

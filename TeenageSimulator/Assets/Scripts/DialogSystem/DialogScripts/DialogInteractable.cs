@@ -115,7 +115,10 @@ public class DialogInteractable : Interactable
     }
     private void SpawnBubble(Transform player)
     {
-        GetBubbleByType(TargetDialog.ConversationType, player).ShowBubble();       
+        if (TargetDialog != null)
+        {
+            GetBubbleByType(TargetDialog.ConversationType, player).ShowBubble();
+        }
     }
 
     private void HideBubbles()
@@ -129,7 +132,7 @@ public class DialogInteractable : Interactable
     public override void EndInteraction()
     {
         Debug.Log(TimedOut);
-        if (!TimedOut)
+        if (!TimedOut && dialogBox != null)
         {
             dialogBox.RequestDialogBoxMove(TextBoxBehaviour.TextBoxState.Retracted);
             CleanUpButtons();
