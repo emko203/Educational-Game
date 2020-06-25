@@ -51,7 +51,7 @@ public class TriggerInteractable : DialogInteractable
         currentInteractions++;
         if (currentInteractions >= MaxInteractions)
         {
-            DeactivateInteractable();
+            DeactivateInteractable(GetComponent<SphereCollider>());
         }
     }
 }

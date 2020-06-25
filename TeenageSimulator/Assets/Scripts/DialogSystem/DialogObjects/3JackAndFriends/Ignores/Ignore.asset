@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Negeren
   linkedDialog: {fileID: 11400000, guid: 673e454f78869f348947311ea1e1e3bf, type: 2}
-  changes: []
+  changes:
+  - Stat: 1
+    ChangeAmount: -1

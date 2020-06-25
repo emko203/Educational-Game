@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
-  m_Name: JackReacts
+  m_Name: IgnoreDialog
   m_EditorClassIdentifier: 
-  text: 'Jack: Wat maakt mij dat nou uit!'
-  options: []
-  conversationType: 1
+  text: 'Peter denkt: Laat ik maar niks zeggen misschien laten ze me dan met rust.'
+  options:
+  - {fileID: 11400000, guid: ddc1c336006c8d54e8a9999e21295576, type: 2}
+  conversationType: 0
