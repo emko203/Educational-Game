@@ -24,6 +24,18 @@ public class TextBoxBehaviour : MonoBehaviour
         rectTransform.DOKill();
 
         rectTransform.DOAnchorPos(endPositon, duration);
+
+        if (boxState == TextBoxState.Retracted)
+        {
+            StartCoroutine(HideTextBox(duration));
+        }
+    }
+
+    IEnumerator HideTextBox(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        gameObject.SetActive(false);
+        StopAllCoroutines();
     }
 
     public void RequestDialogBoxMove(TextBoxState state)
