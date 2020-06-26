@@ -95,19 +95,22 @@ public class DialogInteractable : Interactable
 
     public override void HandleInteraction(Transform player)
     {
-        DialogRequirementsContainer container = player.gameObject.GetComponent<DialogRequirementsContainer>();
-        talkingSoundManager = container.talkingSoundManager;
-        TextBox = container.TextBox;
-        TextBoxGraphic = container.TextBoxGraphic;
-        OptionAnchor = container.OptionAnchor;
-        OptionButton = container.OptionButton;
-        canvas = container.canvas;
-        statHandler = container.statHandler;
-        dialogBox = container.dialogBox.GetComponent<TextBoxBehaviour>();
+        if (TargetDialog != null)
+        {
+            DialogRequirementsContainer container = player.gameObject.GetComponent<DialogRequirementsContainer>();
+            talkingSoundManager = container.talkingSoundManager;
+            TextBox = container.TextBox;
+            TextBoxGraphic = container.TextBoxGraphic;
+            OptionAnchor = container.OptionAnchor;
+            OptionButton = container.OptionButton;
+            canvas = container.canvas;
+            statHandler = container.statHandler;
+            dialogBox = container.dialogBox.GetComponent<TextBoxBehaviour>();
 
+            TurnTimeOutOn();
+        }
         base.HandleInteraction(player);
 
-        TurnTimeOutOn();   
         HandleDialog(player.GetComponent<PlayerMotor>());
 
         if (DoesSpawnBubbles)
@@ -153,8 +156,8 @@ public class DialogInteractable : Interactable
                 dialogBox.RequestDialogBoxMove(TextBoxBehaviour.TextBoxState.Retracted);
                 CleanUpButtons();
                 HideBubbles();
-                base.EndInteraction();
             }
+            base.EndInteraction();
     }
 
 
