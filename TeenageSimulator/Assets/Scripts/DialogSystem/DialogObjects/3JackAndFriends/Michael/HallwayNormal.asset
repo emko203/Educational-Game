@@ -15,5 +15,6 @@ MonoBehaviour:
   text: Hey Peter! Wat loop jij alleen door de gang, heb je geen vrienden om mee
     naar de les te gaan ofzo? Nou jongens pak hem vast. Ik ga ervoor zorgen dat Peter
     te laat komt in zijn volgende les door zijn tas te verstoppen.
-  options: []
+  options:
+  - {fileID: 11400000, guid: e905fc1b7b9e22548a667889e0cc9126, type: 2}
   conversationType: 1

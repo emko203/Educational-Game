@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3f5b636fa6ece468315b69838246ab, type: 3}
-  m_Name: NeverFindBag
+  m_Script: {fileID: 11500000, guid: dafa67dc743d5ca438b2faae277f1322, type: 3}
+  m_Name: NextMichealNormal
   m_EditorClassIdentifier: 
-  text: Zo! Jij zal je rugzak nooit meer terugvinden.
-  options:
-  - {fileID: 11400000, guid: 7126a8ce80cb21e4894f3966c30a75d3, type: 2}
-  conversationType: 1
+  text: ...
+  linkedDialog: {fileID: 11400000, guid: 3db530c33fa7efd4daa2998bd05a5741, type: 2}
+  changes: []
