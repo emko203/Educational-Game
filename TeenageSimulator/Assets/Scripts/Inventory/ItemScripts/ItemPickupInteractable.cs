@@ -6,6 +6,7 @@ public class ItemPickupInteractable : Interactable
 
     public override void HandleInteraction(Transform player)
     {
+        Debug.Log("Pickup");
         PickUp();
     }
 
