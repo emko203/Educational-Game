@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class StatHandler : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField]
-    private int happinessStart;
-    [SerializeField]
-    private int bullyLevelStart;
+    //[SerializeField]
+    //private int happinessStart;
+    //[SerializeField]
+    //private int bullyLevelStart;
     [SerializeField]
     private int happinessMax;
     [SerializeField]
@@ -30,10 +30,10 @@ public class StatHandler : MonoBehaviour
     private float happiness;
     private float bullyLevel;
 
-    private void Start()
+    private void Awake()
     {
-        happiness = happinessStart;
-        bullyLevel = bullyLevelStart;
+        happiness = statHolder.Happiness;
+        bullyLevel = statHolder.BullyLevel;
 
         bullyLevelSlider.maxValue = bullyLevelMax;
         happinessSlider.maxValue = happinessMax;
